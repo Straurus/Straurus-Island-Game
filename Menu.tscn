@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/button.bmp" type="Texture" id=2]
 [ext_resource path="res://Assets/blueframe2.png" type="Texture" id=3]
 [ext_resource path="res://Assets/ilha.bmp" type="Texture" id=4]
+[ext_resource path="res://Assets/ilha2.bmp" type="Texture" id=5]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 3 )
@@ -11,6 +12,7 @@ region_rect = Rect2( 0, 0, 800, 600 )
 
 [sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 4 )
+normal_map = ExtResource( 5 )
 region_rect = Rect2( 0, 0, 365, 107 )
 
 [node name="Menu" type="Control"]
@@ -38,9 +40,9 @@ anchor_left = 0.441
 anchor_top = 0.04
 anchor_right = 0.548
 anchor_bottom = 0.194
-margin_left = -3.77545
-margin_top = -1.90735e-06
-margin_right = 0.320557
+margin_left = -1.58398
+margin_right = 0.848083
+margin_bottom = 1.6
 custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false

@@ -1,12 +1,31 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/texture/obsidian.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/GalaxyUno.bmp" type="Texture" id=3]
 
-[node name="Spatial" type="Spatial"]
+[sub_resource type="PanoramaSky" id=1]
+panorama = ExtResource( 3 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+ambient_light_energy = 5.0
+auto_exposure_enabled = true
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 2 )
+
+[node name="Limbo" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
 
 [node name="CSGBox" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.152, 0 )
+use_collision = true
 width = 500.0
 depth = 500.0
+material = SubResource( 3 )
 
 [node name="mudeater" parent="." instance=ExtResource( 1 )]
