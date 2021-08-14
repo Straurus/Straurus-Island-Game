@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Hilly_Terrain_Hill_Corner_Outer_4x4.obj-ac652ff722fa85d6f08d0dd6fe5028d2.mesh"
+
+[deps]
+
+files=[ "res://.import/Hilly_Terrain_Hill_Corner_Outer_4x4.obj-ac652ff722fa85d6f08d0dd6fe5028d2.mesh" ]
+
+source_file="res://Assets/Objects/modular_terrain_collection/Hilly_Terrain_Hill_Corner_Outer_4x4.obj"
+dest_files=[ "res://.import/Hilly_Terrain_Hill_Corner_Outer_4x4.obj-ac652ff722fa85d6f08d0dd6fe5028d2.mesh", "res://.import/Hilly_Terrain_Hill_Corner_Outer_4x4.obj-ac652ff722fa85d6f08d0dd6fe5028d2.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

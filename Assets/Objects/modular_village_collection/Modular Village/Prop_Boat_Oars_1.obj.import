@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Boat_Oars_1.obj-6c4fda9e9698279820cd0a8148a986bc.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Boat_Oars_1.obj-6c4fda9e9698279820cd0a8148a986bc.mesh" ]
+
+source_file="res://Assets/Objects/modular_village_collection/Modular Village/Prop_Boat_Oars_1.obj"
+dest_files=[ "res://.import/Prop_Boat_Oars_1.obj-6c4fda9e9698279820cd0a8148a986bc.mesh", "res://.import/Prop_Boat_Oars_1.obj-6c4fda9e9698279820cd0a8148a986bc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

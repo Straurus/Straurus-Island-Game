@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Wood_Rope_Stairs.obj-9a185a701967eb16da376adceb483a1a.mesh"
+
+[deps]
+
+files=[ "res://.import/Wood_Rope_Stairs.obj-9a185a701967eb16da376adceb483a1a.mesh" ]
+
+source_file="res://Assets/Objects/modular_village_collection/Modular Village/Wood_Rope_Stairs.obj"
+dest_files=[ "res://.import/Wood_Rope_Stairs.obj-9a185a701967eb16da376adceb483a1a.mesh", "res://.import/Wood_Rope_Stairs.obj-9a185a701967eb16da376adceb483a1a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

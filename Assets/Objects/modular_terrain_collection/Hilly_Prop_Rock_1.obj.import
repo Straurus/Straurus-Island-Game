@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Hilly_Prop_Rock_1.obj-6544ee7f0257c8682e6ab039118cba99.mesh"
+
+[deps]
+
+files=[ "res://.import/Hilly_Prop_Rock_1.obj-6544ee7f0257c8682e6ab039118cba99.mesh" ]
+
+source_file="res://Assets/Objects/modular_terrain_collection/Hilly_Prop_Rock_1.obj"
+dest_files=[ "res://.import/Hilly_Prop_Rock_1.obj-6544ee7f0257c8682e6ab039118cba99.mesh", "res://.import/Hilly_Prop_Rock_1.obj-6544ee7f0257c8682e6ab039118cba99.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

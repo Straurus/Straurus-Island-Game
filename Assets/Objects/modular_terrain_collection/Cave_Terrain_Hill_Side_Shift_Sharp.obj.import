@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Cave_Terrain_Hill_Side_Shift_Sharp.obj-cebf405b2599f93cad7e1d96bb83790a.mesh"
+
+[deps]
+
+files=[ "res://.import/Cave_Terrain_Hill_Side_Shift_Sharp.obj-cebf405b2599f93cad7e1d96bb83790a.mesh" ]
+
+source_file="res://Assets/Objects/modular_terrain_collection/Cave_Terrain_Hill_Side_Shift_Sharp.obj"
+dest_files=[ "res://.import/Cave_Terrain_Hill_Side_Shift_Sharp.obj-cebf405b2599f93cad7e1d96bb83790a.mesh", "res://.import/Cave_Terrain_Hill_Side_Shift_Sharp.obj-cebf405b2599f93cad7e1d96bb83790a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Hilly_Terrain_Path_Esse_2x3.obj-daa038b0df39527e3430458daf088e23.mesh"
+
+[deps]
+
+files=[ "res://.import/Hilly_Terrain_Path_Esse_2x3.obj-daa038b0df39527e3430458daf088e23.mesh" ]
+
+source_file="res://Assets/Objects/modular_terrain_collection/Hilly_Terrain_Path_Esse_2x3.obj"
+dest_files=[ "res://.import/Hilly_Terrain_Path_Esse_2x3.obj-daa038b0df39527e3430458daf088e23.mesh", "res://.import/Hilly_Terrain_Path_Esse_2x3.obj-daa038b0df39527e3430458daf088e23.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

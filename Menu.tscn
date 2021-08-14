@@ -1,18 +1,18 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
-[ext_resource path="res://Assets/button.bmp" type="Texture" id=2]
-[ext_resource path="res://Assets/blueframe2.png" type="Texture" id=3]
-[ext_resource path="res://Assets/ilha.bmp" type="Texture" id=4]
-[ext_resource path="res://Assets/ilha2.bmp" type="Texture" id=5]
+[ext_resource path="res://Assets/textures/button.bmp" type="Texture" id=2]
+[ext_resource path="res://Assets/textures/ilha2.bmp" type="Texture" id=3]
+[ext_resource path="res://Assets/textures/blueframe2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/textures/ilha.bmp" type="Texture" id=5]
 
 [sub_resource type="StyleBoxTexture" id=1]
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 800, 600 )
 
 [sub_resource type="StyleBoxTexture" id=2]
-texture = ExtResource( 4 )
-normal_map = ExtResource( 5 )
+texture = ExtResource( 5 )
+normal_map = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 365, 107 )
 
 [node name="Menu" type="Control"]

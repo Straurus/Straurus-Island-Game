@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Wood_Post_Small.obj-bce8f5711f07cbc8bf3a826d60e444bc.mesh"
+
+[deps]
+
+files=[ "res://.import/Wood_Post_Small.obj-bce8f5711f07cbc8bf3a826d60e444bc.mesh" ]
+
+source_file="res://Assets/Objects/modular_village_collection/Modular Village/Wood_Post_Small.obj"
+dest_files=[ "res://.import/Wood_Post_Small.obj-bce8f5711f07cbc8bf3a826d60e444bc.mesh", "res://.import/Wood_Post_Small.obj-bce8f5711f07cbc8bf3a826d60e444bc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

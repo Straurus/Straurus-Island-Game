@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Beach_Prop_Coconut_1.obj-b1b198d39a5362e3e89d5ce2176fbadc.mesh"
+
+[deps]
+
+files=[ "res://.import/Beach_Prop_Coconut_1.obj-b1b198d39a5362e3e89d5ce2176fbadc.mesh" ]
+
+source_file="res://Assets/Objects/modular_terrain_collection/Beach_Prop_Coconut_1.obj"
+dest_files=[ "res://.import/Beach_Prop_Coconut_1.obj-b1b198d39a5362e3e89d5ce2176fbadc.mesh", "res://.import/Beach_Prop_Coconut_1.obj-b1b198d39a5362e3e89d5ce2176fbadc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

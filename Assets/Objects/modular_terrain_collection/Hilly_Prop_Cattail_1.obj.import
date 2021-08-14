@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Hilly_Prop_Cattail_1.obj-1d093e0c2ae64c07b7d5aec4fa6c893f.mesh"
+
+[deps]
+
+files=[ "res://.import/Hilly_Prop_Cattail_1.obj-1d093e0c2ae64c07b7d5aec4fa6c893f.mesh" ]
+
+source_file="res://Assets/Objects/modular_terrain_collection/Hilly_Prop_Cattail_1.obj"
+dest_files=[ "res://.import/Hilly_Prop_Cattail_1.obj-1d093e0c2ae64c07b7d5aec4fa6c893f.mesh", "res://.import/Hilly_Prop_Cattail_1.obj-1d093e0c2ae64c07b7d5aec4fa6c893f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

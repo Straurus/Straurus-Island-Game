@@ -1,9 +1,9 @@
 extends KinematicBody
 
-var i=3
+var i=10
 var gravidade = 9.8
-var velocidade = 1
-var aceleracao = 2
+var velocidade = 10
+var aceleracao = 20
 var rotacao_velocidade = 0.85
 
 var direcao = Vector3()
@@ -33,7 +33,7 @@ func _physics_process(delta):
 		minhaPosicao.y -= gravidade * delta
 	move_and_slide(minhaPosicao, Vector3.UP) 
 	
-	if Input.is_action_just_pressed("ui_jump") && is_on_floor():
+	if Input.is_action_just_pressed("ui_space") && is_on_floor():
 		minhaPosicao.y = pulo_velocidade
 	
 	direcao = direcao.normalized()

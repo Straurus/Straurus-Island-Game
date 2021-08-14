@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/grave6.obj-4eae09102a429f3987e9781ec637f34c.mesh"
+
+[deps]
+
+files=[ "res://.import/grave6.obj-4eae09102a429f3987e9781ec637f34c.mesh" ]
+
+source_file="res://Assets/Objects/cemetery/grave6.obj"
+dest_files=[ "res://.import/grave6.obj-4eae09102a429f3987e9781ec637f34c.mesh", "res://.import/grave6.obj-4eae09102a429f3987e9781ec637f34c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

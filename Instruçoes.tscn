@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/button.bmp" type="Texture" id=1]
+[ext_resource path="res://Assets/textures/button.bmp" type="Texture" id=1]
 [ext_resource path="res://Instruçoes.gd" type="Script" id=2]
 
 [node name="Control" type="Control"]
@@ -20,9 +20,9 @@ __meta__ = {
 
 [node name="GridContainer" type="GridContainer" parent="CenterContainer"]
 margin_left = 360.0
-margin_top = 217.0
+margin_top = 234.0
 margin_right = 663.0
-margin_bottom = 382.0
+margin_bottom = 365.0
 
 [node name="Label" type="Label" parent="CenterContainer/GridContainer"]
 margin_right = 303.0
@@ -32,22 +32,21 @@ text = "Istruçoes:"
 [node name="Label2" type="Label" parent="CenterContainer/GridContainer"]
 margin_top = 18.0
 margin_right = 303.0
-margin_bottom = 83.0
-text = "dfxfgfd
-fdgddf
-gdf
-dfgd"
+margin_bottom = 49.0
+text = "movemento:setas
+"
 
 [node name="HSeparator" type="HSeparator" parent="CenterContainer/GridContainer"]
-margin_top = 87.0
+margin_top = 53.0
 margin_right = 303.0
-margin_bottom = 91.0
+margin_bottom = 57.0
 
 [node name="Button" type="Button" parent="CenterContainer/GridContainer"]
-margin_top = 95.0
+margin_top = 61.0
 margin_right = 303.0
-margin_bottom = 165.0
+margin_bottom = 131.0
 icon = ExtResource( 1 )
+flat = true
 
 [node name="Label" type="Label" parent="CenterContainer/GridContainer/Button"]
 anchor_right = 1.0
