@@ -1,3 +1,21 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
 
-[node name="Spatial" type="Spatial"]
+[ext_resource path="res://Player1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Ocean.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/MainEnvironment.tres" type="Environment" id=3]
+
+[node name="caverna" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 3 )
+
+[node name="Ocean" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="."]
+use_collision = true
+width = 200.0
+depth = 200.0
+
+[node name="mudeater" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )

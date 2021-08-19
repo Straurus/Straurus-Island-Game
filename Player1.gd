@@ -1,18 +1,15 @@
 extends KinematicBody
 
-var i=10
 var gravidade = 9.8
 var velocidade = 10
 var aceleracao = 20
-var rotacao_velocidade = 0.85
-
+var rotacao_velocidade = 0.5
+var pulo_velocidade = 10
 var direcao = Vector3()
 var deslocamento = Vector3()
 var minhaPosicao = Vector3()
-var pulo_velocidade = i
 
 func _ready():
-	
 	pass
 
 func _physics_process(delta):
@@ -40,6 +37,6 @@ func _physics_process(delta):
 	deslocamento = direcao * velocidade
 	deslocamento.linear_interpolate(deslocamento, aceleracao * delta)
 	move_and_slide(deslocamento, Vector3.UP)
-	for i in get_slide_count():
-		var colisao = get_slide_collision(i)
-		pass
+#	for i in get_slide_count():
+#		var colisao = get_slide_collision(i)
+#		pass
