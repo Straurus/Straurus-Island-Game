@@ -1,10 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/textures/button.bmp" type="Texture" id=2]
 [ext_resource path="res://Assets/textures/ilha2.bmp" type="Texture" id=3]
 [ext_resource path="res://Assets/textures/blueframe2.png" type="Texture" id=4]
 [ext_resource path="res://Assets/textures/ilha.bmp" type="Texture" id=5]
+[ext_resource path="res://Assets/Songs/Art_Of_Escapism_-_Arduous_Twine.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Assets/textures/ui song/A - 57.png" type="Texture" id=7]
+[ext_resource path="res://Assets/textures/ui song/A - 56.png" type="Texture" id=8]
+[ext_resource path="res://Assets/textures/ui song/A - 55.png" type="Texture" id=9]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 4 )
@@ -22,14 +26,21 @@ margin_left = -3.17477
 margin_top = 17.4614
 margin_right = -3.1748
 margin_bottom = 17.4614
+rect_pivot_offset = Vector2( -155.176, 169 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+mix_target = 1
+
 [node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -60,9 +71,9 @@ __meta__ = {
 
 [node name="GridContainer" type="GridContainer" parent="CenterContainer"]
 margin_left = 360.0
-margin_top = 165.0
+margin_top = 143.0
 margin_right = 663.0
-margin_bottom = 435.0
+margin_bottom = 457.0
 __meta__ = {
 "_edit_lock_": true
 }
@@ -159,6 +170,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="HSeparator3" type="HSeparator" parent="CenterContainer/GridContainer"]
+margin_top = 274.0
+margin_right = 303.0
+margin_bottom = 278.0
+
+[node name="HSplitContainer" type="HSplitContainer" parent="CenterContainer/GridContainer"]
+margin_top = 282.0
+margin_right = 303.0
+margin_bottom = 314.0
+
+[node name="ButtonMusic" type="CheckButton" parent="CenterContainer/GridContainer/HSplitContainer"]
+margin_right = 303.0
+margin_bottom = 32.0
+custom_icons/off = ExtResource( 8 )
+custom_icons/on_disabled = ExtResource( 7 )
+custom_icons/on = ExtResource( 9 )
+pressed = true
+text = "Music"
+align = 2
+
 [connection signal="pressed" from="CenterContainer/GridContainer/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="CenterContainer/GridContainer/Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="CenterContainer/GridContainer/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="toggled" from="CenterContainer/GridContainer/HSplitContainer/ButtonMusic" to="." method="_on_ButtonMusic_toggled"]

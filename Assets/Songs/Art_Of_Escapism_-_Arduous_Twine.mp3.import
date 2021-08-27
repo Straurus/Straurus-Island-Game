@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Art_Of_Escapism_-_Arduous_Twine.mp3-7832f95d350ea34c2d27630f95b2c797.mp3str"
+
+[deps]
+
+source_file="res://Assets/Songs/Art_Of_Escapism_-_Arduous_Twine.mp3"
+dest_files=[ "res://.import/Art_Of_Escapism_-_Arduous_Twine.mp3-7832f95d350ea34c2d27630f95b2c797.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -2,12 +2,13 @@ extends Control
 
 
 # Declare member variables here. Examples:
-# var a = 2
+var i 
 # var b = "text"
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	i=false
 	pass # Replace with function body.
 
 
@@ -28,3 +29,12 @@ func _on_Button2_pressed():
 
 func _on_Button3_pressed():
 	get_tree().free()
+
+
+func _on_ButtonMusic_toggled(button_pressed):
+	if i==false:
+		get_node("AudioStreamPlayer").play()
+		i=true
+	else:
+		get_node("AudioStreamPlayer").stop()
+		i=false

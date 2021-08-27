@@ -14,6 +14,11 @@ config/name="Straurus Island Game"
 run/main_scene="res://Menu.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [input]
 
 ui_space={
