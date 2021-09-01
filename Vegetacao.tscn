@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Ocean.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/MainEnvironment.tres" type="Environment" id=3]
+[ext_resource path="res://Assets/fern.tres" type="Material" id=4]
+[ext_resource path="res://Assets/grass.tres" type="Material" id=5]
 
 [node name="Vegetacao" type="Spatial"]
 
@@ -12,10 +14,69 @@ environment = ExtResource( 3 )
 [node name="Ocean" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
 
-[node name="CSGBox" type="CSGBox" parent="."]
-use_collision = true
-width = 200.0
-depth = 200.0
-
 [node name="mudeater" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( -2, 0, -3.01992e-07, 0, 2, 0, 3.01992e-07, 0, -2, 0, 1, 0 )
+use_collision = true
+width = 100.0
+depth = 100.0
+material = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CSGBox2" type="CSGBox" parent="CSGBox"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 50, 10, 0 )
+width = 100.0
+height = 20.0
+material = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CSGBox3" type="CSGBox" parent="CSGBox"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 10, -50 )
+width = 100.0
+height = 20.0
+material = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CSGBox4" type="CSGBox" parent="CSGBox"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -50, 10, 0 )
+width = 100.0
+height = 20.0
+material = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CSGBox6" type="CSGBox" parent="CSGBox"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 10, 50 )
+width = 100.0
+height = 20.0
+material = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CSGBox7" type="CSGBox" parent="CSGBox"]
+transform = Transform( 1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -28.6728, 10, -4.37114e-06 )
+width = 45.0
+height = 20.0
+material = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CSGBox8" type="CSGBox" parent="CSGBox"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 27.5482, 10, 0 )
+width = 45.0
+height = 20.0
+material = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}

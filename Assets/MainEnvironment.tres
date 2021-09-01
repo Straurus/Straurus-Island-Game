@@ -10,5 +10,3 @@ background_mode = 2
 background_sky = SubResource( 1 )
 background_sky_orientation = Basis( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1 )
 background_color = Color( 1, 1, 1, 1 )
-ambient_light_energy = 5.0
-auto_exposure_enabled = true
