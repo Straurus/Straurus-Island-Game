@@ -4,6 +4,7 @@ extends Spatial
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Music.checkMusic()
 	pass # Replace with function body.
 
 
@@ -14,9 +15,11 @@ func _ready():
 
 func _on_Area_body_entered(body):
 	get_tree().change_scene("res://Menu.tscn")
+	Global.song=true
 	queue_free()
 
 
 func _on_Area2_body_entered(body):
 	get_tree().change_scene("res://Inicio.tscn")
 	queue_free()
+

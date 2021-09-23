@@ -1,11 +1,28 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Player1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Ocean.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/MainEnvironment.tres" type="Environment" id=3]
 [ext_resource path="res://Assets/rock.tres" type="Material" id=4]
+[ext_resource path="res://Caverna.gd" type="Script" id=5]
+[ext_resource path="res://dragon.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Objects/modular_terrain_collection/Cave_Prop_Entrance_1.obj" type="ArrayMesh" id=7]
+[ext_resource path="res://Assets/portal_animatedtexture.tres" type="Texture" id=8]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.721, 0.5, 0.2 )
+
+[sub_resource type="QuadMesh" id=3]
+size = Vector2( 2, 2 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 8 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.721, 0.5, 0.2 )
 
 [node name="caverna" type="Spatial"]
+script = ExtResource( 5 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 3 )
@@ -14,7 +31,10 @@ environment = ExtResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
 
 [node name="mudeater" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.06726, 0 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 82, 2, 50 )
+
+[node name="dragon" parent="." instance=ExtResource( 6 )]
+transform = Transform( -36.9563, 0, -33.6784, 0, 50, 0, 33.6784, 0, -36.9563, 67.6665, 17.4885, -41.2012 )
 
 [node name="CSGBox" type="CSGBox" parent="."]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
@@ -68,3 +88,98 @@ transform = Transform( -1, 0, 1.50996e-07, 0, 2, 0, -1.50996e-07, 0, -1, 0, 18, 
 width = 100.0
 height = 20.0
 material = ExtResource( 4 )
+
+[node name="CSGBox" type="CSGBox" parent="CSGBox"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, 18, -21 )
+width = 40.0
+height = 40.0
+material = ExtResource( 4 )
+
+[node name="Cave_Prop_Entrance_1" type="MeshInstance" parent="."]
+transform = Transform( -5.46392e-07, 0, 12.5, 0, 12.5, 0, -12.5, 0, -5.46392e-07, 85, 1, 45 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+material/21 = null
+material/22 = null
+material/23 = null
+material/24 = null
+material/25 = null
+material/26 = null
+
+[node name="areaCave_out" type="Area" parent="Cave_Prop_Entrance_1"]
+transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cave_Prop_Entrance_1/areaCave_out"]
+transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, -0.5, 0.75, 0.5 )
+shape = SubResource( 1 )
+
+[node name="portal" type="CSGMesh" parent="Cave_Prop_Entrance_1"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.448367, 0.851077, 0.738416 )
+mesh = SubResource( 3 )
+material = SubResource( 4 )
+
+[node name="Cave_Prop_Entrance_2" type="MeshInstance" parent="."]
+transform = Transform( -5.46392e-07, 0, 12.5, 0, 12.5, 0, -12.5, 0, -5.46392e-07, -100, 1, -65 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null
+material/20 = null
+material/21 = null
+material/22 = null
+material/23 = null
+material/24 = null
+material/25 = null
+material/26 = null
+
+[node name="areaCave_in" type="Area" parent="Cave_Prop_Entrance_2"]
+transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cave_Prop_Entrance_2/areaCave_in"]
+transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, -0.5, 0.75, 0.5 )
+shape = SubResource( 2 )
+
+[node name="portal" type="CSGMesh" parent="Cave_Prop_Entrance_2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.448367, 0.851077, 0.2406 )
+mesh = SubResource( 3 )
+material = SubResource( 4 )
+
+[connection signal="body_entered" from="Cave_Prop_Entrance_1/areaCave_out" to="." method="_on_areaCave_out_body_entered"]
+[connection signal="body_entered" from="Cave_Prop_Entrance_2/areaCave_in" to="." method="_on_areaCave_in_body_entered"]

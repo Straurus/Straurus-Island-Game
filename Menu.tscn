@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/textures/button.bmp" type="Texture" id=2]
 [ext_resource path="res://Assets/textures/ilha2.bmp" type="Texture" id=3]
 [ext_resource path="res://Assets/textures/blueframe2.png" type="Texture" id=4]
 [ext_resource path="res://Assets/textures/ilha.bmp" type="Texture" id=5]
-[ext_resource path="res://Assets/Songs/Art_Of_Escapism_-_Arduous_Twine.mp3" type="AudioStream" id=6]
 [ext_resource path="res://Assets/textures/ui song/A - 57.png" type="Texture" id=7]
 [ext_resource path="res://Assets/textures/ui song/A - 56.png" type="Texture" id=8]
 [ext_resource path="res://Assets/textures/ui song/A - 55.png" type="Texture" id=9]
@@ -31,10 +30,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
-mix_target = 1
 
 [node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0
@@ -186,7 +181,6 @@ margin_bottom = 32.0
 custom_icons/off = ExtResource( 8 )
 custom_icons/on_disabled = ExtResource( 7 )
 custom_icons/on = ExtResource( 9 )
-pressed = true
 text = "Music"
 align = 2
 
