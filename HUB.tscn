@@ -5,7 +5,26 @@
 [node name="HUB" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -3.36359
+margin_right = -3.36359
 script = ExtResource( 1 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
+}
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 512, 256 )
+handle_input_locally = false
+render_target_update_mode = 3
+__meta__ = {
+"_editor_description_": ""
 }
