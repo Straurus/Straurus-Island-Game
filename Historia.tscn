@@ -1,0 +1,515 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/textures/ilha2.bmp" type="Texture" id=1]
+[ext_resource path="res://Assets/textures/ilha.bmp" type="Texture" id=2]
+[ext_resource path="res://Assets/textures/blueframe2.png" type="Texture" id=3]
+[ext_resource path="res://Historia.gd" type="Script" id=4]
+[ext_resource path="res://Assets/textures/button.bmp" type="Texture" id=5]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 800, 600 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 365, 107 )
+
+[node name="Historias" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 51, 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Inicio" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Inicio" type="RichTextLabel" parent="ViewportContainer/Inicio"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "Você acorda numa ilha e não sabe como você segou nessa ilha, mas você vê três caminhos, um caminho que leva pra dentro da ilha, outro que vai em direção a uma caverna e outra que vai para um barco encalhado."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Limbo" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Limbo" type="RichTextLabel" parent="ViewportContainer/Limbo"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "Você morreu."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Caverna" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Caverna" type="RichTextLabel" parent="ViewportContainer/Caverna"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "Você entra na caverna, caminha um pouco e vê dois caminhos: A leste um que um monstro negro que esta dormindo e a oeste uma passagem pra dentro da caverna.
+Você vai a leste para atacar o monstro,vai pra oeste pra dentro da cavernaou retorna por onde  tu vieste."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dentroIlha" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="dentroIlha" type="RichTextLabel" parent="ViewportContainer/dentroIlha"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "Indo pra dentro da ilha você vê uma bifurcação de um lado você vê um caminho de vegetação morta , outro uma floresta  ou você pode retornar pra onde tu vieste"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="acambamentoCaverna" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="acambamentoCaverna" type="RichTextLabel" parent="ViewportContainer/acambamentoCaverna"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "Depois de caminhar muito na caverna você encontra um acampamento abandonado.
+Você decide dormir um pouco.
+No outro dia você acorda, caminha muito e vê uma saída da caverna, e você vai pra ela.
+"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bifurcaçao" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Bifurcaçao" type="RichTextLabel" parent="ViewportContainer/Bifurcaçao"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "Nessa bifurcação você vê três caminhos: um em direçao a uma caverna, um em direçao a foresta e outra em direçao a uma cabana."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Historia" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Historia" type="RichTextLabel" parent="ViewportContainer/Historia"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "escrevo esta carta para contar minha historia, mas contarei rápido pois estou em uma tempestade:
+Eu acordei em uma ilha, depois de caminhar muito eu achei um bilhete que me levou pro cais e a um barco que usei pra sair da ilha...
+
+Depois de ler voce acha uma espada ao lado da carta e você decite retornar."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cabana" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Cabana" type="RichTextLabel" parent="ViewportContainer/Cabana"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "Você entra na cabana e você vê uma cama.
+Você dorme na cama e no outro dia voce vê um bilhete escrito que tem um barco de esperando no cais atrás da cabana."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="barcoEncalhado" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="barcoEncalhado" type="RichTextLabel" parent="ViewportContainer/barcoEncalhado"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "No navio você vê uma carta e nela está escrito a sua historia e como você segou nessa ilha."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Monstro" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Monstro" type="RichTextLabel" parent="ViewportContainer/Monstro"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "Quando tu aproxima do mostro ele acorda e como você não tem arma o monstro te mata."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Monstro2" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Monstro2" type="RichTextLabel" parent="ViewportContainer/Monstro2"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "Quando tu aproxima do mostro ele acorda e como você tem arma ,tu mata o monstro"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="saidaCaverna" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="saidaCaverna" type="RichTextLabel" parent="ViewportContainer/saidaCaverna"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "Saindo da caverna você encontra uma bifurcaçao."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="acampamentoFloresta" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="acambamentoFloresta" type="RichTextLabel" parent="ViewportContainer/acampamentoFloresta"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "Você caminha um pouco e vê um acampamento abandonado e resolve dormir um pouco.
+No outro dia você caminha mais um pouco e vê uma bifurcaçao."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="areiaMovediça" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="areiaMovediça" type="RichTextLabel" parent="ViewportContainer/areiaMovediça"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "Você caminha um pouco e derepente você se ve em uma areia movediça e você morre."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="areiaMovediça2" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="areiaMovediça2" type="RichTextLabel" parent="ViewportContainer/areiaMovediça2"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "Você caminha um pouco e de repente você seve em uma areia movediça e você usa o galho que tu achou e escapa"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="caminhoCaverna" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="caminhoCaverna" type="RichTextLabel" parent="ViewportContainer/caminhoCaverna"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "Você caminha pastando e ve tres caminhos: a leste um que um monstro negro que esta dormindo e a oeste uma passagem pra dentro da caverna.
+Você vai a leste para atacar o monstro,vai pra oeste pra dentro da caverna ou em uma passagem pra fora da caverna."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cais" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Cais" type="RichTextLabel" parent="ViewportContainer/Cais"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "Você vê o cai e encontra o barco atracado lá e você vai ao barco."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Barco" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Barco" type="RichTextLabel" parent="ViewportContainer/Barco"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "No barco você vê a chave dele, mas não vê ninguém nele, então você decide liga-lo e entra em alto-mar."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Altomar" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Altomar" type="RichTextLabel" parent="ViewportContainer/Altomar"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "Você sai da ilha, mas em alto-mar você entra numa tempesdade e você decide escrever uma carta contado sua historia, depois disso a tempestade de encontra e destroi o deu barco fazendo você desmaiar e você retorna na ilha"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Win" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Win" type="RichTextLabel" parent="ViewportContainer/Win"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "you win "
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="monstroMorto" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="monstroMorto" type="RichTextLabel" parent="ViewportContainer/monstroMorto"]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_size = 10
+text = "com o monstro morto no chao você o vasculha e você acha um galho longo você pega o galha e você segue seu caminho ou você deixa o galho
+e você segue o teu caminho."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.94389
+margin_bottom = 1.94391
+rect_pivot_offset = Vector2( -293.298, 234.206 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="Panel"]
+anchor_left = 0.441
+anchor_top = 0.04
+anchor_right = 0.548
+anchor_bottom = 0.194
+margin_left = -1.58398
+margin_right = 0.848083
+margin_bottom = 1.6
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Panel"]
+margin_left = 356.558
+margin_top = 477.853
+margin_right = 659.558
+margin_bottom = 547.853
+icon = ExtResource( 5 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel/Button"]
+anchor_right = 0.972
+anchor_bottom = 1.0
+margin_left = 7.0
+margin_top = 3.0
+margin_right = 0.483978
+margin_bottom = -5.0
+text = "Continuar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_Button_pressed"]

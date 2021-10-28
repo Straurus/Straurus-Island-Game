@@ -1,18 +1,27 @@
 extends KinematicBody
 
 var gravidade = 9.8
-var velocidade = 10
+var velocidade = 20
 var aceleracao = 20
 var rotacao_velocidade = 0.5
 var pulo_velocidade = 10
 var direcao = Vector3()
 var deslocamento = Vector3()
 var minhaPosicao = Vector3()
+var location = 1
 
 func _ready():
 	pass
 
 func _physics_process(delta):
+	location=Global.locationPlayer
+	if location==1:
+		velocidade=20
+	elif location==2:
+		velocidade=50
+	elif location==0:
+		velocidade=100
+
 	var direcao = Vector3()
 	deslocamento.y += gravidade * delta
 

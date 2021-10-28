@@ -7,6 +7,7 @@ extends Spatial
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.locationPlayer=2
 	Music.checkMusic()
 	if Global.positionPlayer==1:
 		get_node("mudeater").transform=get_node("Position").transform
@@ -22,7 +23,8 @@ func _ready():
 
 func _on_areaCave_out_body_entered(body):
 	Global.positionPlayer=1
-	get_tree().change_scene("res://Inicio.tscn")
+	Global.location=0
+	get_tree().change_scene("res://Historia.tscn")
 	pass # Replace with function body.
 
 

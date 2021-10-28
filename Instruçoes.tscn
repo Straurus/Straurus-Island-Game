@@ -22,47 +22,52 @@ __meta__ = {
 margin_left = 360.0
 margin_top = 221.0
 margin_right = 663.0
-margin_bottom = 378.0
+margin_bottom = 379.0
 
 [node name="Label" type="Label" parent="CenterContainer/GridContainer"]
 margin_right = 303.0
 margin_bottom = 14.0
-text = "Istruçoes:"
+text = "Instruçoes:"
 
 [node name="Label2" type="Label" parent="CenterContainer/GridContainer"]
 margin_top = 18.0
 margin_right = 303.0
-margin_bottom = 49.0
-text = "movemento:setas
-"
+margin_bottom = 32.0
+text = "movemento: setas"
+
+[node name="Label4" type="Label" parent="CenterContainer/GridContainer"]
+margin_top = 36.0
+margin_right = 303.0
+margin_bottom = 50.0
+text = "Objetivo: achar uma saida da Ilha"
 
 [node name="HSeparator" type="HSeparator" parent="CenterContainer/GridContainer"]
-margin_top = 53.0
+margin_top = 54.0
 margin_right = 303.0
-margin_bottom = 57.0
+margin_bottom = 58.0
 rect_pivot_offset = Vector2( -56.9605, -74.7682 )
 
 [node name="Label3" type="Label" parent="CenterContainer/GridContainer"]
-margin_top = 61.0
+margin_top = 62.0
 margin_right = 303.0
-margin_bottom = 75.0
+margin_bottom = 76.0
 text = "Music: Art of escapism-arduous twine"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HSeparator2" type="HSeparator" parent="CenterContainer/GridContainer"]
-margin_top = 79.0
+margin_top = 80.0
 margin_right = 303.0
-margin_bottom = 83.0
+margin_bottom = 84.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button" type="Button" parent="CenterContainer/GridContainer"]
-margin_top = 87.0
+margin_top = 88.0
 margin_right = 303.0
-margin_bottom = 157.0
+margin_bottom = 158.0
 icon = ExtResource( 1 )
 flat = true
 

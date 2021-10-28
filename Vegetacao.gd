@@ -3,6 +3,7 @@ extends Spatial
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.locationPlayer=2
 	Music.checkMusic()
 	if Global.positionPlayer==1:
 		get_node("mudeater").translation=get_node("Position").translation
@@ -32,5 +33,6 @@ func _on_areaFlorest_body_entered(body):
 
 func _on_areaInicio_body_entered(body):
 	Global.positionPlayer=3
-	get_tree().change_scene("res://Inicio.tscn")
+	Global.location=0
+	get_tree().change_scene("res://Historia.tscn")
 	pass # Replace with function body.

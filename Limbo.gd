@@ -4,6 +4,7 @@ extends Spatial
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.locationPlayer=0
 	Music.checkMusic()
 	pass # Replace with function body.
 
@@ -20,6 +21,7 @@ func _on_Area_body_entered(body):
 
 
 func _on_Area2_body_entered(body):
-	get_tree().change_scene("res://Inicio.tscn")
+	Global.location=0
+	get_tree().change_scene("res://Historia.tscn")
 	queue_free()
 

@@ -14,8 +14,10 @@ func _ready():
 
 
 func _on_Button_pressed():
+	Global.location=0
 	Global.positionPlayer=0
-	get_tree().change_scene("res://Inicio.tscn")
+	get_tree().change_scene("res://Historia.tscn")
+	#get_tree().change_scene("res://Inicio.tscn")
 	#queue_free()
 
 

@@ -174,14 +174,14 @@ material/1 = null
 material/2 = null
 
 [node name="areaFloresta_in" type="Area" parent="tree_obj2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 40, 0 )
+transform = Transform( 1, 0, -2.84217e-14, 0, 1, 0, 2.84217e-14, 0, 1, 100.035, 42, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="tree_obj2/areaFloresta_in"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.07146, 0 )
+transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, -7, 0 )
 shape = SubResource( 7 )
 
 [node name="portal" type="CSGMesh" parent="tree_obj2"]
-transform = Transform( -50, 0, -4.37114e-06, 0, 50, 0, 4.37114e-06, 0, -50, 97.3307, 38.6678, 36.5128 )
+transform = Transform( -50, 0, -4.37114e-06, 0, 50, 0, 4.37114e-06, 0, -50, 97.3307, 47.662, 15.9997 )
 mesh = SubResource( 5 )
 material = SubResource( 6 )
 
@@ -189,11 +189,11 @@ material = SubResource( 6 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 2, -48 )
 
 [node name="Position2" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 2, 53 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -74.9259, 1.8955, 52.9855 )
 
 [node name="Position3" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 2, 55 )
 
 [connection signal="body_entered" from="tree_obj/areaFloresta_out" to="." method="_on_areaFloresta_out_body_entered"]
 [connection signal="body_entered" from="bush_02/areaBushes" to="." method="_on_areaBushes_body_entered"]
-[connection signal="body_entered" from="tree_obj2/areaFloresta_in" to="." method="_on_areaFloresta_body_entered"]
+[connection signal="body_entered" from="tree_obj2/areaFloresta_in" to="." method="_on_areaFloresta_in_body_entered"]

@@ -2,7 +2,8 @@ extends Node
 
 var song
 var positionPlayer
-
+var locationPlayer
+var location
 
 func _ready():
 	pass
