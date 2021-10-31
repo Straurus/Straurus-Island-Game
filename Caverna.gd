@@ -12,14 +12,21 @@ func _ready():
 	if Global.positionPlayer==1:
 		get_node("mudeater").transform=get_node("Position").transform
 	elif Global.positionPlayer==2:
-		get_node("mudeater").transform==get_node("Position2").transform
+		get_node("mudeater").transform=get_node("Position2").transform
+	elif Global.positionPlayer==3:
+		get_node("mudeater").transform=get_node("Position3").transform
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	checkDragon()
+	pass
 
-
+func checkDragon():
+	if Global.deathMonstro==true:
+		get_node("dragon/dragon/dragon").hide()
+	elif Global.deathMonstro==false:
+		get_node("dragon/dragon/dragon").show()
 
 func _on_areaCave_out_body_entered(body):
 	Global.positionPlayer=1
@@ -31,5 +38,22 @@ func _on_areaCave_out_body_entered(body):
 func _on_areaCave_in_body_entered(body):
 	#bifurcaçao cabana
 	Global.positionPlayer=2
-	get_tree().change_scene("res://Vegetacao.tscn")
+	Global.lastLocation=Global.location
+	Global.location=4
+	get_tree().change_scene("res://Historia.tscn")
+	pass # Replace with function body.
+
+
+func _on_areaMonstro_body_entered(body):
+	Global.positionPlayer=3
+	if Global.deathMonstro==false:
+		if Global.weapon==true:
+			Global.location=10
+			Global.deathMonstro=true
+		elif Global.weapon==false:
+			Global.location=9
+			Global.deathMonstro=false
+	else:
+		Global.location=20
+	get_tree().change_scene("res://Historia.tscn")
 	pass # Replace with function body.

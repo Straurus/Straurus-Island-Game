@@ -41,3 +41,11 @@ func _on_areaFloresta_body_entered(body):
 	get_tree().change_scene("res://Historia.tscn")
 	#get_tree().change_scene("res://Floresta.tscn")
 	#queue_free()
+
+
+func _on_Area_body_entered(body):
+	Global.positionPlayer=0
+	Global.location=6
+	Global.weapon=true
+	get_tree().change_scene("res://Historia.tscn")
+	pass # Replace with function body.

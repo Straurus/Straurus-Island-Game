@@ -1,9 +1,13 @@
 extends Node
 
-var song
+var song=false
 var positionPlayer
 var locationPlayer
 var location
+var lastLocation
+var weapon=false
+var plank=false
+var deathMonstro=false
 
 func _ready():
 	pass

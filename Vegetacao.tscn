@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Player1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Ocean.tscn" type="PackedScene" id=2]
@@ -11,6 +11,12 @@
 [ext_resource path="res://Assets/bush.tres" type="Material" id=9]
 [ext_resource path="res://Assets/portal_animatedtexture.tres" type="Texture" id=10]
 [ext_resource path="res://Assets/Objects/modular_terrain_collection/Cave_Prop_Entrance_1.obj" type="ArrayMesh" id=11]
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_texture = ExtResource( 10 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 50, 1, 50 )
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 40, 40, 5 )
@@ -90,6 +96,7 @@ __meta__ = {
 
 [node name="CSGBox7" type="CSGBox" parent="CSGBox"]
 transform = Transform( 1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -41, 10, 0 )
+visible = false
 width = 15.0
 height = 20.0
 material = ExtResource( 4 )
@@ -99,9 +106,13 @@ __meta__ = {
 
 [node name="CSGBox8" type="CSGBox" parent="CSGBox"]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 37.7, 10, 0 )
+visible = false
 width = 25.0
 height = 20.0
 material = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CSGBox9" type="CSGBox" parent="CSGBox"]
 transform = Transform( -0.5, 0, 7.5498e-08, 0, 0.5, 0, -7.5498e-08, 0, -0.5, 0, -0.5, 0 )
@@ -119,6 +130,30 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.14001, 0 )
 width = 100.0
 depth = 100.0
 material = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CSGSphere" type="CSGSphere" parent="quicksand"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.2862, 0 )
+radius = 7.0
+radial_segments = 7
+rings = 3
+material = SubResource( 8 )
+
+[node name="areaQuicksand" type="Area" parent="quicksand"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+gravity_vec = Vector3( 0, -4, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="quicksand/areaQuicksand"]
+shape = SubResource( 7 )
+
+[node name="areaQuicksand2" type="Area" parent="quicksand"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, 0 )
+gravity_vec = Vector3( 0, -4, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="quicksand/areaQuicksand2"]
+shape = SubResource( 7 )
 
 [node name="Position" type="Position3D" parent="."]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 70, 2, 48 )
@@ -216,6 +251,8 @@ transform = Transform( 50, 0, 0, 0, 50, 0, 0, 0, 50, 114.831, 68.4858, -7.97946 
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
+[connection signal="body_entered" from="quicksand/areaQuicksand" to="." method="_on_areaQuicksand_body_entered"]
+[connection signal="body_entered" from="quicksand/areaQuicksand2" to="." method="_on_areaQuicksand2_body_entered"]
 [connection signal="body_entered" from="bush_florest/areaFlorest" to="." method="_on_areaFlorest_body_entered"]
 [connection signal="body_entered" from="Cave_Prop_Entrance/areaCave" to="." method="_on_areaCave_body_entered"]
 [connection signal="body_entered" from="bush_Inicio/areaInicio" to="." method="_on_areaInicio_body_entered"]

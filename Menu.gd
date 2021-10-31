@@ -9,6 +9,9 @@ var i
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.weapon=false
+	Global.plank=false
+	Global.song=false
 	Music.checkMusic()
 	pass # Replace with function body.
 
@@ -31,7 +34,7 @@ func _on_Button3_pressed():
 
 
 func _on_ButtonMusic_toggled(button_pressed):
-	if i==false:
+	if get_node("CenterContainer/GridContainer/HSplitContainer/ButtonMusic").pressed==true:
 		i=true
 		Global.song = i
 		Music.checkMusic()

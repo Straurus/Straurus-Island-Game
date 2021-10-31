@@ -112,10 +112,10 @@ flat = true
 [node name="Label" type="Label" parent="CenterContainer/GridContainer/Button"]
 anchor_right = 0.972
 anchor_bottom = 1.0
-margin_left = 7.0
-margin_top = 3.0
-margin_right = 0.483978
-margin_bottom = -5.0
+margin_left = 6.2063
+margin_top = 3.7937
+margin_right = -0.309723
+margin_bottom = -4.2063
 text = "Jogar"
 align = 1
 valign = 1
@@ -178,9 +178,9 @@ margin_bottom = 314.0
 [node name="ButtonMusic" type="CheckButton" parent="CenterContainer/GridContainer/HSplitContainer"]
 margin_right = 303.0
 margin_bottom = 32.0
-custom_icons/off = ExtResource( 8 )
+custom_icons/off = ExtResource( 9 )
 custom_icons/on_disabled = ExtResource( 7 )
-custom_icons/on = ExtResource( 9 )
+custom_icons/on = ExtResource( 8 )
 text = "Music"
 align = 2
 

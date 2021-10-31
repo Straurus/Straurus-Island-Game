@@ -26,6 +26,7 @@ func hideAll():
 	get_node("ViewportContainer/Altomar/Altomar").hide()
 	get_node("ViewportContainer/Win/Win").hide()
 	get_node("ViewportContainer/monstroMorto/monstroMorto").hide()
+	get_node("ViewportContainer/monstroMorto/pegar").hide()
 	pass
 
 func _process(delta):
@@ -40,7 +41,7 @@ func _process(delta):
 	elif Global.location==2:
 		hideAll()
 		get_node("ViewportContainer/Caverna/Caverna").show()
-		pass
+		pass	
 	elif Global.location==3:
 		hideAll()
 		get_node("ViewportContainer/dentroIlha/dentroIlha").show()
@@ -112,6 +113,7 @@ func _process(delta):
 	elif Global.location==20:
 		hideAll()
 		get_node("ViewportContainer/monstroMorto/monstroMorto").show()
+		get_node("ViewportContainer/monstroMorto/pegar").show()
 		pass
 	pass
 
@@ -124,24 +126,26 @@ func _on_Button_pressed():
 		get_tree().change_scene("res://Limbo.tscn")
 		pass
 	elif Global.location==2:
-		Global.location=4
+		#Global.location=4
+		get_tree().change_scene("res://Caverna.tscn")
 		#get_tree().change_scene("res://Historia.tscn")
 		pass
 	elif Global.location==3:
-		Global.location=12
+		get_tree().change_scene("res://Floresta.tscn")
+		#Global.location=12
 		#get_tree().change_scene("res://Historia.tscn")
 		pass
 	elif Global.location==4:
-		get_tree().change_scene("res://Caverna.tscn")
+		Global.location=11
 		pass
 	elif Global.location==5:
-		
+		get_tree().change_scene("res://cais.tscn")
 		pass
 	elif Global.location==6:
 		get_tree().change_scene("res://Inicio.tscn")
 		pass
 	elif Global.location==7:
-		
+		get_tree().change_scene("res://cais.tscn")
 		pass
 	elif Global.location==8:
 		Global.location=6
@@ -151,26 +155,26 @@ func _on_Button_pressed():
 		get_tree().change_scene("res://Limbo.tscn")
 		pass
 	elif Global.location==10:
-		get_tree().change_scene("res://Caverna.tscn")
+		Global.location=20
 		pass
 	elif Global.location==11:
-		
+		Global.location=5
 		pass
 	elif Global.location==12:
-		get_tree().change_scene("res://Floresta.tscn")
+		Global.location=5
 		pass
 	elif Global.location==13:
 		get_tree().change_scene("res://Limbo.tscn")
 		pass
 	elif Global.location==14:
-		get_tree().change_scene("res://Vegetacao.tscn")
+		Global.location=19
 		pass
 	elif Global.location==15:
 		Global.location=2
 		#get_tree().change_scene("res://Historia.tscn")
 		pass
 	elif Global.location==16:
-		
+		Global.location=17
 		pass
 	elif Global.location==17:
 		Global.location=18
@@ -183,6 +187,22 @@ func _on_Button_pressed():
 		get_tree().change_scene("res://Inicio.tscn")
 		pass
 	elif Global.location==20:
-		
+		get_tree().change_scene("res://Caverna.tscn")
 		pass
+	pass # Replace with function body.
+
+
+func _on_pegar_button_up():
+	pass # Replace with function body.
+
+
+func _on_pegar_button_down():
+	pass # Replace with function body.
+
+
+func _on_pegar_toggled(button_pressed):
+	if get_node("ViewportContainer/monstroMorto/pegar").pressed==true:
+		Global.plank=true
+	else:
+		Global.plank=false
 	pass # Replace with function body.

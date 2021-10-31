@@ -38,6 +38,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="Inicio" type="RichTextLabel" parent="ViewportContainer/Inicio"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -58,6 +59,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="Limbo" type="RichTextLabel" parent="ViewportContainer/Limbo"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -78,6 +80,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="Caverna" type="RichTextLabel" parent="ViewportContainer/Caverna"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -99,6 +102,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="dentroIlha" type="RichTextLabel" parent="ViewportContainer/dentroIlha"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -119,6 +123,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="acambamentoCaverna" type="RichTextLabel" parent="ViewportContainer/acambamentoCaverna"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -142,6 +147,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="Bifurcaçao" type="RichTextLabel" parent="ViewportContainer/Bifurcaçao"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -162,6 +168,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="Historia" type="RichTextLabel" parent="ViewportContainer/Historia"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -185,6 +192,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="Cabana" type="RichTextLabel" parent="ViewportContainer/Cabana"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -206,6 +214,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="barcoEncalhado" type="RichTextLabel" parent="ViewportContainer/barcoEncalhado"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -226,6 +235,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="Monstro" type="RichTextLabel" parent="ViewportContainer/Monstro"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -266,6 +276,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="saidaCaverna" type="RichTextLabel" parent="ViewportContainer/saidaCaverna"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -286,6 +297,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="acambamentoFloresta" type="RichTextLabel" parent="ViewportContainer/acampamentoFloresta"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -307,6 +319,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="areiaMovediça" type="RichTextLabel" parent="ViewportContainer/areiaMovediça"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -327,6 +340,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="areiaMovediça2" type="RichTextLabel" parent="ViewportContainer/areiaMovediça2"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -347,6 +361,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="caminhoCaverna" type="RichTextLabel" parent="ViewportContainer/caminhoCaverna"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -368,6 +383,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="Cais" type="RichTextLabel" parent="ViewportContainer/Cais"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -388,6 +404,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="Barco" type="RichTextLabel" parent="ViewportContainer/Barco"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -408,6 +425,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="Altomar" type="RichTextLabel" parent="ViewportContainer/Altomar"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -428,6 +446,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="Win" type="RichTextLabel" parent="ViewportContainer/Win"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -448,6 +467,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="monstroMorto" type="RichTextLabel" parent="ViewportContainer/monstroMorto"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -462,6 +482,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="pegar" type="CheckBox" parent="ViewportContainer/monstroMorto"]
+visible = false
+anchor_left = 0.4
+anchor_top = 0.4
+anchor_right = 0.4
+anchor_bottom = 0.4
+margin_right = 29.0
+margin_bottom = 20.0
+action_mode = 0
+text = "pegar"
+
 [node name="Panel" type="Panel" parent="."]
 show_behind_parent = true
 anchor_right = 1.0
@@ -471,6 +502,7 @@ margin_bottom = 1.94391
 rect_pivot_offset = Vector2( -293.298, 234.206 )
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -512,4 +544,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[connection signal="toggled" from="ViewportContainer/monstroMorto/pegar" to="." method="_on_pegar_toggled"]
 [connection signal="pressed" from="Panel/Button" to="." method="_on_Button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Player1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Ocean.tscn" type="PackedScene" id=2]
@@ -8,6 +8,20 @@
 [ext_resource path="res://dragon.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Objects/modular_terrain_collection/Cave_Prop_Entrance_1.obj" type="ArrayMesh" id=7]
 [ext_resource path="res://Assets/portal_animatedtexture.tres" type="Texture" id=8]
+[ext_resource path="res://Assets/Objects/plank.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Objects/mediavalsigns/medievalsigns3.tscn" type="PackedScene" id=10]
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 0.9, 0.2, 0.1 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.05, 0.2, 0.6 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.3, 0.2, 0.05 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.05, 0.2, 0.45 )
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.721, 0.5, 0.2 )
@@ -24,6 +38,9 @@ extents = Vector3( 0.721, 0.5, 0.2 )
 [node name="caverna" type="Spatial"]
 script = ExtResource( 5 )
 
+[node name="medievalsigns" parent="." instance=ExtResource( 10 )]
+transform = Transform( -0.150442, 0, -9.99887, 0, 10, 0, 9.99887, 0, -0.150442, -22.7608, 0.206804, -45.4318 )
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 3 )
 
@@ -33,7 +50,37 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
 [node name="mudeater" parent="." instance=ExtResource( 1 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 82, 2, 50 )
 
-[node name="dragon" parent="." instance=ExtResource( 6 )]
+[node name="dragon" type="Spatial" parent="."]
+
+[node name="plank" parent="dragon" instance=ExtResource( 9 )]
+transform = Transform( 0.254137, -0.875376, -4.91621, 4.62442, 1.89867, -0.0990225, 1.88419, -4.54189, 0.906126, 91.5068, 17.6518, -11.5481 )
+
+[node name="areaMonstro1" type="Area" parent="dragon"]
+transform = Transform( -2.31783, 0, -49.9463, 0, 50, 0, 49.9463, 0, -2.31783, 24.7786, 17.4885, -50.8798 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="dragon/areaMonstro1"]
+transform = Transform( 1, 0, 3.72529e-09, 0, 1, 0, -3.72529e-09, 0, 1, 0, 0, 0 )
+shape = SubResource( 8 )
+
+[node name="areaMonstro" type="Area" parent="dragon"]
+transform = Transform( -36.9563, 0, -33.6784, 0, 50, 0, 33.6784, 0, -36.9563, 64.1836, 17.4885, -45.0231 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="dragon/areaMonstro"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.262575, 0, -0.200489 )
+visible = false
+shape = SubResource( 6 )
+
+[node name="CollisionShape" type="CollisionShape" parent="dragon/areaMonstro"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.346 )
+visible = false
+shape = SubResource( 5 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="dragon/areaMonstro"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.259092, 0, -0.0602975 )
+visible = false
+shape = SubResource( 7 )
+
+[node name="dragon" parent="dragon" instance=ExtResource( 6 )]
 transform = Transform( -36.9563, 0, -33.6784, 0, 50, 0, 33.6784, 0, -36.9563, 67.6665, 17.4885, -41.2012 )
 
 [node name="CSGBox" type="CSGBox" parent="."]
@@ -52,33 +99,49 @@ use_collision = true
 width = 100.0
 depth = 100.0
 material = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CSGBox2" type="CSGBox" parent="CSGBox"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 2, 0, 1, 0, -4.37114e-08, 50, 18, 0 )
 width = 100.0
 height = 20.0
 material = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CSGBox3" type="CSGBox" parent="CSGBox"]
 transform = Transform( -1, 0, 1.50996e-07, 0, 2, 0, -1.50996e-07, 0, -1, 0, 18, -50 )
 width = 100.0
 height = 20.0
 material = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CSGBox4" type="CSGBox" parent="CSGBox"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 2, 0, -1, 0, -4.37114e-08, -50, 18, 0 )
 width = 100.0
 height = 20.0
 material = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CSGBox5" type="CSGBox" parent="CSGBox"]
 transform = Transform( -1, 0, 1.50996e-07, 0, 2, 0, -1.50996e-07, 0, -1, 27.548, 18, 0 )
 width = 45.0
 height = 20.0
 material = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CSGBox6" type="CSGBox" parent="CSGBox"]
 transform = Transform( 1, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, 1, -28.673, 18, 0 )
+visible = false
 width = 45.0
 height = 20.0
 material = ExtResource( 4 )
@@ -88,12 +151,19 @@ transform = Transform( -1, 0, 1.50996e-07, 0, 2, 0, -1.50996e-07, 0, -1, 0, 18, 
 width = 100.0
 height = 20.0
 material = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CSGBox" type="CSGBox" parent="CSGBox"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, 18, -21 )
+visible = false
 width = 40.0
 height = 40.0
 material = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Cave_Prop_Entrance_1" type="MeshInstance" parent="."]
 transform = Transform( -5.46392e-07, 0, 12.5, 0, 12.5, 0, -12.5, 0, -5.46392e-07, 85, 1, 45 )
@@ -125,6 +195,9 @@ material/23 = null
 material/24 = null
 material/25 = null
 material/26 = null
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="areaCave_out" type="Area" parent="Cave_Prop_Entrance_1"]
 transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
@@ -168,6 +241,9 @@ material/23 = null
 material/24 = null
 material/25 = null
 material/26 = null
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="areaCave_in" type="Area" parent="Cave_Prop_Entrance_2"]
 transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
@@ -183,9 +259,23 @@ material = SubResource( 3 )
 
 [node name="Position" type="Position3D" parent="."]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 82, 2, 50 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Position3" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0184, 0, -43.4356 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Position2" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -85, 2, -60 )
+__meta__ = {
+"_edit_lock_": true
+}
 
+[connection signal="body_entered" from="dragon/areaMonstro1" to="." method="_on_areaMonstro_body_entered"]
+[connection signal="body_entered" from="dragon/areaMonstro" to="." method="_on_areaMonstro_body_entered"]
 [connection signal="body_entered" from="Cave_Prop_Entrance_1/areaCave_out" to="." method="_on_areaCave_out_body_entered"]
 [connection signal="body_entered" from="Cave_Prop_Entrance_2/areaCave_in" to="." method="_on_areaCave_in_body_entered"]

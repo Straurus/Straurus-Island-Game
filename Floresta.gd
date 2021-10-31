@@ -24,7 +24,7 @@ func _ready():
 #	pass
 
 
-func _on_areaFloresta_out_body_entered(body):
+func _on_areaFloresta0_body_entered(body):
 	Global.positionPlayer=1
 	Global.location=0
 	get_tree().change_scene("res://Historia.tscn")
@@ -37,10 +37,11 @@ func _on_areaBushes_body_entered():
 	pass # Replace with function body.
 
 
-func _on_areaFloresta_in_body_entered():
-	print("pass")
+func _on_areaFloresta1_body_entered(body):
 	Global.positionPlayer=2
-	get_tree().change_scene("res://Caverna.tscn")
+	Global.lastLocation=Global.location
+	Global.location=12
+	get_tree().change_scene("res://Historia.tscn")
 	pass # Replace with function body.
 
 
