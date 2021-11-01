@@ -22,7 +22,7 @@ func _ready():
 
 func _on_areaCave_body_entered(body):
 	Global.positionPlayer=1
-	Global.location=15
+	Global.location=2
 	get_tree().change_scene("res://Historia.tscn")
 	#get_tree().change_scene("res://Caverna.tscn")
 	

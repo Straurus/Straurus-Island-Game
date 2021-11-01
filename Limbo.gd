@@ -21,6 +21,7 @@ func _on_Area_body_entered(body):
 
 
 func _on_Area2_body_entered(body):
+	Global.positionPlayer=0
 	Global.location=0
 	get_tree().change_scene("res://Historia.tscn")
 	queue_free()

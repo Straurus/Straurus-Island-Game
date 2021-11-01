@@ -11,28 +11,28 @@
 [ext_resource path="res://Assets/Objects/plank.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Objects/mediavalsigns/medievalsigns3.tscn" type="PackedScene" id=10]
 
-[sub_resource type="BoxShape" id=8]
+[sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.9, 0.2, 0.1 )
 
-[sub_resource type="BoxShape" id=6]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 0.05, 0.2, 0.6 )
 
-[sub_resource type="BoxShape" id=5]
+[sub_resource type="BoxShape" id=3]
 extents = Vector3( 0.3, 0.2, 0.05 )
 
-[sub_resource type="BoxShape" id=7]
+[sub_resource type="BoxShape" id=4]
 extents = Vector3( 0.05, 0.2, 0.45 )
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="BoxShape" id=5]
 extents = Vector3( 0.721, 0.5, 0.2 )
 
-[sub_resource type="QuadMesh" id=2]
+[sub_resource type="QuadMesh" id=6]
 size = Vector2( 2, 2 )
 
-[sub_resource type="SpatialMaterial" id=3]
+[sub_resource type="SpatialMaterial" id=7]
 albedo_texture = ExtResource( 8 )
 
-[sub_resource type="BoxShape" id=4]
+[sub_resource type="BoxShape" id=8]
 extents = Vector3( 0.721, 0.5, 0.2 )
 
 [node name="caverna" type="Spatial"]
@@ -56,11 +56,17 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 82, 2, 
 transform = Transform( 0.254137, -0.875376, -4.91621, 4.62442, 1.89867, -0.0990225, 1.88419, -4.54189, 0.906126, 91.5068, 17.6518, -11.5481 )
 
 [node name="areaMonstro1" type="Area" parent="dragon"]
-transform = Transform( -2.31783, 0, -49.9463, 0, 50, 0, 49.9463, 0, -2.31783, 24.7786, 17.4885, -50.8798 )
+transform = Transform( -2.31783, 0, -49.9463, 0, 50, 0, 49.9463, 0, -2.31783, 24.7786, 61.2697, -50.8798 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="dragon/areaMonstro1"]
 transform = Transform( 1, 0, 3.72529e-09, 0, 1, 0, -3.72529e-09, 0, 1, 0, 0, 0 )
-shape = SubResource( 8 )
+shape = SubResource( 1 )
+
+[node name="Position3D" type="Position3D" parent="dragon"]
+transform = Transform( -2.31783, 0, -49.9463, 0, 50, 0, 49.9463, 0, -2.31783, 24.7786, 17.4885, -50.8798 )
+
+[node name="Position3D2" type="Position3D" parent="dragon"]
+transform = Transform( -2.31783, 0, -49.9463, 0, 50, 0, 49.9463, 0, -2.31783, 24.7786, 61.2697, -50.8798 )
 
 [node name="areaMonstro" type="Area" parent="dragon"]
 transform = Transform( -36.9563, 0, -33.6784, 0, 50, 0, 33.6784, 0, -36.9563, 64.1836, 17.4885, -45.0231 )
@@ -68,17 +74,17 @@ transform = Transform( -36.9563, 0, -33.6784, 0, 50, 0, 33.6784, 0, -36.9563, 64
 [node name="CollisionShape2" type="CollisionShape" parent="dragon/areaMonstro"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.262575, 0, -0.200489 )
 visible = false
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="dragon/areaMonstro"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.346 )
 visible = false
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="dragon/areaMonstro"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.259092, 0, -0.0602975 )
 visible = false
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="dragon" parent="dragon" instance=ExtResource( 6 )]
 transform = Transform( -36.9563, 0, -33.6784, 0, 50, 0, 33.6784, 0, -36.9563, 67.6665, 17.4885, -41.2012 )
@@ -204,12 +210,12 @@ transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Cave_Prop_Entrance_1/areaCave_out"]
 transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, -0.5, 0.75, 0.5 )
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 
 [node name="portal" type="CSGMesh" parent="Cave_Prop_Entrance_1"]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.448367, 0.851077, 0.738416 )
-mesh = SubResource( 2 )
-material = SubResource( 3 )
+mesh = SubResource( 6 )
+material = SubResource( 7 )
 
 [node name="Cave_Prop_Entrance_2" type="MeshInstance" parent="."]
 transform = Transform( -5.46392e-07, 0, 12.5, 0, 12.5, 0, -12.5, 0, -5.46392e-07, -100, 1, -65 )
@@ -250,12 +256,12 @@ transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Cave_Prop_Entrance_2/areaCave_in"]
 transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, -0.5, 0.75, 0.5 )
-shape = SubResource( 4 )
+shape = SubResource( 8 )
 
 [node name="portal" type="CSGMesh" parent="Cave_Prop_Entrance_2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.448367, 0.851077, 0.2406 )
-mesh = SubResource( 2 )
-material = SubResource( 3 )
+mesh = SubResource( 6 )
+material = SubResource( 7 )
 
 [node name="Position" type="Position3D" parent="."]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 82, 2, 50 )
@@ -265,9 +271,6 @@ __meta__ = {
 
 [node name="Position3" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0184, 0, -43.4356 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Position2" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -85, 2, -60 )

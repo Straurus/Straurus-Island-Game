@@ -15,19 +15,24 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	checkPlank()
+	pass
 
 
 func _on_areaCave_body_entered(body):
 	Global.positionPlayer=2
-	get_tree().change_scene("res://Caverna.tscn")
+	Global.location=2
+	get_tree().change_scene("res://Historia.tscn")
+	#get_tree().change_scene("res://Caverna.tscn")
 	pass # Replace with function body.
 
 
 func _on_areaFlorest_body_entered(body):
 	Global.positionPlayer=3
-	get_tree().change_scene("res://Floresta.tscn")
+	Global.location=3
+	get_tree().change_scene("res://Historia.tscn")
+	#get_tree().change_scene("res://Floresta.tscn")
 	pass # Replace with function body.
 
 
@@ -40,7 +45,6 @@ func _on_areaInicio_body_entered(body):
 
 func _on_areaQuicksand_body_entered(body):
 	if Global.plank==true:
-		get_node("quicksand").use_collision=true
 		Global.location=14
 		get_tree().change_scene("res://Historia.tscn")
 	pass # Replace with function body.
@@ -48,7 +52,14 @@ func _on_areaQuicksand_body_entered(body):
 
 func _on_areaQuicksand2_body_entered(body):
 	if Global.plank==false:
-		get_node("quicksand").use_collision=false
 		Global.location=13
 		get_tree().change_scene("res://Historia.tscn")
 	pass # Replace with function body.
+
+func checkPlank():
+	if Global.plank==true:
+		#get_node("CSGBox/CSGBox9").operation=CSGShape.OPERATION_UNION
+		get_node("quicksand").use_collision=true
+	else:
+		get_node("quicksand").use_collision=false
+		#get_node("CSGBox/CSGBox9").operation=CSGShape.OPERATION_SUBTRACTION

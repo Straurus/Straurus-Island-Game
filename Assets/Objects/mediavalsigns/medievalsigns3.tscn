@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/Objects/Wood.material" type="Material" id=2]
 [ext_resource path="res://Assets/textures/wood/wood.tres" type="Material" id=3]
 
-[sub_resource type="ArrayMesh" id=5]
+[sub_resource type="ArrayMesh" id=1]
 blend_shape_mode = 0
 surfaces/0 = {
 "aabb": AABB( -0.000321118, -0.0104778, 0.0209399, 0.000642237, 0.00942681, 0.0022057 ),
@@ -33,7 +33,7 @@ surfaces/1 = {
 "vertex_count": 12
 }
 
-[sub_resource type="ArrayMesh" id=4]
+[sub_resource type="ArrayMesh" id=2]
 blend_shape_mode = 0
 surfaces/0 = {
 "aabb": AABB( -0.000320131, 0.0010726, 0.0209409, 0.000650261, 0.00966788, 0.00221373 ),
@@ -62,7 +62,7 @@ surfaces/1 = {
 "vertex_count": 10
 }
 
-[sub_resource type="ArrayMesh" id=6]
+[sub_resource type="ArrayMesh" id=3]
 blend_shape_mode = 0
 surfaces/0 = {
 "aabb": AABB( -0.000977574, -0.00106101, -4.54271e-06, 0.00214361, 0.00213361, 0.0244006 ),
@@ -97,18 +97,18 @@ surfaces/1 = {
 
 [node name="Sign1" type="MeshInstance" parent="RootNode"]
 transform = Transform( 100, 0, 0, 0, -3.57628e-05, 100, 0, -100, -3.57628e-05, 0, 0, 0 )
-mesh = SubResource( 5 )
+mesh = SubResource( 1 )
 material/0 = ExtResource( 3 )
 material/1 = ExtResource( 3 )
 
 [node name="Sign4" type="MeshInstance" parent="RootNode"]
 transform = Transform( 100, 0, 0, 0, -3.57628e-05, 100, 0, -100, -3.57628e-05, 0, 0, 0 )
-mesh = SubResource( 4 )
+mesh = SubResource( 2 )
 material/0 = ExtResource( 3 )
 material/1 = null
 
 [node name="SignPost" type="MeshInstance" parent="RootNode"]
 transform = Transform( 100, 0, 0, 0, -3.57628e-05, 100, 0, -100, -3.57628e-05, 0, 0, 0 )
-mesh = SubResource( 6 )
+mesh = SubResource( 3 )
 material/0 = ExtResource( 3 )
 material/1 = ExtResource( 3 )

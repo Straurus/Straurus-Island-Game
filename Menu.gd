@@ -9,6 +9,7 @@ var i
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.deathMonstro=false
 	Global.weapon=false
 	Global.plank=false
 	Global.song=false

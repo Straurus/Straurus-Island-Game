@@ -33,7 +33,7 @@ surfaces/1 = {
 "vertex_count": 12
 }
 
-[sub_resource type="ArrayMesh" id=3]
+[sub_resource type="ArrayMesh" id=2]
 blend_shape_mode = 0
 surfaces/0 = {
 "aabb": AABB( -0.0106455, -0.00032013, 0.0209409, 0.00967788, 0.00065026, 0.00221373 ),
@@ -62,7 +62,7 @@ surfaces/1 = {
 "vertex_count": 10
 }
 
-[sub_resource type="ArrayMesh" id=5]
+[sub_resource type="ArrayMesh" id=3]
 blend_shape_mode = 0
 surfaces/0 = {
 "aabb": AABB( -0.000977574, -0.00106101, -4.54271e-06, 0.00214361, 0.00213361, 0.0244006 ),
@@ -103,12 +103,12 @@ material/1 = ExtResource( 3 )
 
 [node name="Sign3" type="MeshInstance" parent="RootNode"]
 transform = Transform( 100, 0, 0, 0, -3.57628e-05, 100, 0, -100, -3.57628e-05, 0, 0, 0 )
-mesh = SubResource( 3 )
+mesh = SubResource( 2 )
 material/0 = ExtResource( 3 )
 material/1 = ExtResource( 3 )
 
 [node name="SignPost" type="MeshInstance" parent="RootNode"]
 transform = Transform( 100, 0, 0, 0, -3.57628e-05, 100, 0, -100, -3.57628e-05, 0, 0, 0 )
-mesh = SubResource( 5 )
+mesh = SubResource( 3 )
 material/0 = ExtResource( 3 )
 material/1 = ExtResource( 3 )

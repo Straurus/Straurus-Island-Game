@@ -27,6 +27,8 @@ func hideAll():
 	get_node("ViewportContainer/Win/Win").hide()
 	get_node("ViewportContainer/monstroMorto/monstroMorto").hide()
 	get_node("ViewportContainer/monstroMorto/pegar").hide()
+	get_node("ViewportContainer/monstroMorto/deixar").hide()
+	get_node("Panel/Button").show()
 	pass
 
 func _process(delta):
@@ -114,6 +116,8 @@ func _process(delta):
 		hideAll()
 		get_node("ViewportContainer/monstroMorto/monstroMorto").show()
 		get_node("ViewportContainer/monstroMorto/pegar").show()
+		get_node("ViewportContainer/monstroMorto/deixar").show()
+		get_node("Panel/Button").hide()
 		pass
 	pass
 
@@ -126,9 +130,7 @@ func _on_Button_pressed():
 		get_tree().change_scene("res://Limbo.tscn")
 		pass
 	elif Global.location==2:
-		#Global.location=4
 		get_tree().change_scene("res://Caverna.tscn")
-		#get_tree().change_scene("res://Historia.tscn")
 		pass
 	elif Global.location==3:
 		get_tree().change_scene("res://Floresta.tscn")
@@ -170,8 +172,8 @@ func _on_Button_pressed():
 		Global.location=19
 		pass
 	elif Global.location==15:
-		Global.location=2
-		#get_tree().change_scene("res://Historia.tscn")
+		#Global.location=2
+		get_tree().change_scene("res://Caverna.tscn")
 		pass
 	elif Global.location==16:
 		Global.location=17
@@ -184,25 +186,28 @@ func _on_Button_pressed():
 		get_tree().change_scene("res://Inicio.tscn")
 		pass
 	elif Global.location==19:
-		get_tree().change_scene("res://Inicio.tscn")
+		get_tree().change_scene("res://Menu.tscn")
 		pass
 	elif Global.location==20:
 		get_tree().change_scene("res://Caverna.tscn")
 		pass
 	pass # Replace with function body.
 
-
-func _on_pegar_button_up():
-	pass # Replace with function body.
-
-
-func _on_pegar_button_down():
-	pass # Replace with function body.
-
-
-func _on_pegar_toggled(button_pressed):
+#func _on_pegar_toggled(button_pressed):
 	if get_node("ViewportContainer/monstroMorto/pegar").pressed==true:
 		Global.plank=true
 	else:
 		Global.plank=false
+	pass # Replace with function body.
+
+
+func _on_pegar_pressed():
+	Global.plank=true
+	get_tree().change_scene("res://Caverna.tscn")
+	pass # Replace with function body.
+
+
+func _on_deixar_pressed():
+	Global.plank=false
+	get_tree().change_scene("res://Caverna.tscn")
 	pass # Replace with function body.

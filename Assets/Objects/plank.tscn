@@ -1,8 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Objects/color_palette.material" type="Material" id=1]
+[ext_resource path="res://Assets/plank.tres" type="Material" id=2]
 
-[sub_resource type="ArrayMesh" id=31]
+[sub_resource type="ArrayMesh" id=1]
 blend_shape_mode = 0
 surfaces/0 = {
 "aabb": AABB( -0.00619699, -0.0334677, -0.00144562, 0.0126153, 0.0662103, 0.00290124 ),
@@ -24,5 +25,5 @@ surfaces/0 = {
 
 [node name="Planks_3" type="MeshInstance" parent="RootNode"]
 transform = Transform( 7.7486e-05, -100, -8.9407e-06, 0, -1.19209e-05, 100, -100, -8.04663e-05, 0, 0, 0, 0 )
-mesh = SubResource( 31 )
-material/0 = null
+mesh = SubResource( 1 )
+material/0 = ExtResource( 2 )

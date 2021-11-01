@@ -25,8 +25,10 @@ func _process(delta):
 func checkDragon():
 	if Global.deathMonstro==true:
 		get_node("dragon/dragon/dragon").hide()
+		get_node("dragon/areaMonstro1").transform=get_node("dragon/Position3D2").transform
 	elif Global.deathMonstro==false:
 		get_node("dragon/dragon/dragon").show()
+		get_node("dragon/areaMonstro1").transform=get_node("dragon/Position3D").transform
 
 func _on_areaCave_out_body_entered(body):
 	Global.positionPlayer=1
@@ -56,4 +58,5 @@ func _on_areaMonstro_body_entered(body):
 	else:
 		Global.location=20
 	get_tree().change_scene("res://Historia.tscn")
+	checkDragon()
 	pass # Replace with function body.
