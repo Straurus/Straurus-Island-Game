@@ -77,7 +77,9 @@ margin_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_size = 10
-text = "Você morreu."
+text = "Você morreu. 
+
+E você surge no limbo."
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false

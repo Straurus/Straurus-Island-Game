@@ -1,21 +1,21 @@
 extends Control
 
 
-# Declare member variables here. Examples:
 var i 
-#signal song
-# var b = "text"
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
+	Music.selMusic=0
 	Global.deathMonstro=false
 	Global.weapon=false
 	Global.plank=false
-	Global.song=false
 	Music.checkMusic()
 	pass # Replace with function body.
 
+func _process(delta):
+	if Global.song==true:
+		get_node("CenterContainer/GridContainer/HSplitContainer/ButtonMusic").pressed=true
+	elif Global.song==false:
+		get_node("CenterContainer/GridContainer/HSplitContainer/ButtonMusic").pressed=false
 
 func _on_Button_pressed():
 	Global.location=0

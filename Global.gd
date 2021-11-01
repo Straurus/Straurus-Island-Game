@@ -1,6 +1,7 @@
 extends Node
 
 var song=false
+var selMusic
 var positionPlayer
 var locationPlayer
 var location
@@ -8,16 +9,32 @@ var lastLocation
 var weapon=false
 var plank=false
 var deathMonstro=false
+var audio
 
 func _ready():
+	selMusic=0
 	pass
 	
+#func _process(delta):
+#		pass
+
+func selcMusic():
+	if selMusic==0:
+		get_node("limbo").stop()
+		audio=get_node("main")
+	elif selMusic==1:
+		get_node("main").stop()
+		audio=get_node("limbo")
+
 func playMusic():
-	get_node("AudioStreamPlayer").play()
+	audio.play()
+	
 func stopMusic():
-	get_node("AudioStreamPlayer").stop()
+	audio.stop()
+	
 func checkMusic():
-	if Global.song ==false:
+	selcMusic()
+	if Global.song==false:
 		stopMusic()
 	else:
 		playMusic()

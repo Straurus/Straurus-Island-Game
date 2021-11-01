@@ -4,8 +4,10 @@ extends Spatial
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Music.selMusic=1
 	Global.locationPlayer=0
 	Music.checkMusic()
+	Music.selcMusic()
 	pass # Replace with function body.
 
 

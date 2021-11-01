@@ -153,13 +153,13 @@ gravity_vec = Vector3( 0, -4, 0 )
 shape = SubResource( 2 )
 
 [node name="Position" type="Position3D" parent="."]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 70, 2, 48 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 70, 2, 50 )
 
 [node name="Position2" type="Position3D" parent="."]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -74, 2, -48 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -74, 2, -48 )
 
 [node name="Position3" type="Position3D" parent="."]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -75, 2, 53 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -75, 2, 53 )
 
 [node name="bush_florest" type="MeshInstance" parent="."]
 transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -90, 0, 73.501 )

@@ -37,6 +37,7 @@ func _process(delta):
 		get_node("ViewportContainer/Inicio/Inicio").show()
 		pass
 	elif Global.location==1:
+		Music.selMusic=1
 		hideAll()
 		get_node("ViewportContainer/Limbo/Limbo").show()
 		pass
@@ -154,7 +155,7 @@ func _on_Button_pressed():
 		#get_tree().change_scene("res://Historia.tscn")
 		pass
 	elif Global.location==9:
-		get_tree().change_scene("res://Limbo.tscn")
+		Global.location=1
 		pass
 	elif Global.location==10:
 		Global.location=20
@@ -166,7 +167,7 @@ func _on_Button_pressed():
 		Global.location=5
 		pass
 	elif Global.location==13:
-		get_tree().change_scene("res://Limbo.tscn")
+		Global.location=1
 		pass
 	elif Global.location==14:
 		Global.location=19

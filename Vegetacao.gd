@@ -3,6 +3,7 @@ extends Spatial
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.selMusic=0
 	#Global.locationPlayer=2
 	Music.checkMusic()
 	if Global.positionPlayer==1:

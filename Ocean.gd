@@ -11,6 +11,7 @@ func _ready():
 
 
 func _on_Area_body_entered(body):
+	Music.selMusic=1
 	Global.location=1
 	get_tree().change_scene("res://Historia.tscn")
 	queue_free()
