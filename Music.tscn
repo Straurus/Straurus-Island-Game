@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Global.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Songs/Art_Of_Escapism_-_Arduous_Twine.mp3" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Songs/Motions.mp3" type="AudioStream" id=2]
 [ext_resource path="res://Assets/Songs/The Land of the Dead.mp3" type="AudioStream" id=3]
 
 [node name="Music" type="Control"]

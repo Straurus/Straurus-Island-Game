@@ -1,13 +1,15 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/textures/button.bmp" type="Texture" id=2]
 [ext_resource path="res://Assets/textures/ilha2.bmp" type="Texture" id=3]
 [ext_resource path="res://Assets/textures/blueframe2.png" type="Texture" id=4]
 [ext_resource path="res://Assets/textures/ilha.bmp" type="Texture" id=5]
+[ext_resource path="res://Assets/textures/fonts/RunicFont.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Assets/textures/ui song/A - 57.png" type="Texture" id=7]
 [ext_resource path="res://Assets/textures/ui song/A - 56.png" type="Texture" id=8]
 [ext_resource path="res://Assets/textures/ui song/A - 55.png" type="Texture" id=9]
+[ext_resource path="res://Assets/textures/fonts/handwrite.tres" type="DynamicFont" id=10]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 4 )
@@ -66,9 +68,9 @@ __meta__ = {
 
 [node name="GridContainer" type="GridContainer" parent="CenterContainer"]
 margin_left = 360.0
-margin_top = 143.0
+margin_top = 133.0
 margin_right = 663.0
-margin_bottom = 457.0
+margin_bottom = 467.0
 __meta__ = {
 "_edit_lock_": true
 }
@@ -116,6 +118,7 @@ margin_left = 6.2063
 margin_top = 3.7937
 margin_right = -0.309723
 margin_bottom = -4.2063
+custom_fonts/font = ExtResource( 6 )
 text = "Jogar"
 align = 1
 valign = 1
@@ -137,6 +140,7 @@ margin_left = 7.0
 margin_top = 4.41422
 margin_right = 0.483978
 margin_bottom = -3.58578
+custom_fonts/font = ExtResource( 6 )
 text = "Instruções"
 align = 1
 valign = 1
@@ -158,6 +162,7 @@ margin_left = 7.0
 margin_top = 3.0
 margin_right = 0.483978
 margin_bottom = -5.0
+custom_fonts/font = ExtResource( 6 )
 text = "Sair"
 align = 1
 valign = 1
@@ -173,14 +178,15 @@ margin_bottom = 278.0
 [node name="HSplitContainer" type="HSplitContainer" parent="CenterContainer/GridContainer"]
 margin_top = 282.0
 margin_right = 303.0
-margin_bottom = 314.0
+margin_bottom = 334.0
 
 [node name="ButtonMusic" type="CheckButton" parent="CenterContainer/GridContainer/HSplitContainer"]
 margin_right = 303.0
-margin_bottom = 32.0
+margin_bottom = 52.0
 custom_icons/off = ExtResource( 9 )
 custom_icons/on_disabled = ExtResource( 7 )
 custom_icons/on = ExtResource( 8 )
+custom_fonts/font = ExtResource( 10 )
 text = "Music"
 align = 2
 

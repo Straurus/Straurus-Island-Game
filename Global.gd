@@ -6,17 +6,22 @@ var positionPlayer
 var locationPlayer
 var location
 var lastLocation
+var translationPlayer
 var weapon=false
 var plank=false
 var deathMonstro=false
 var audio
 
+func positionPlayer(vector3, x):
+	translationPlayer=vector3
+	lastLocation=x
+
 func _ready():
 	selMusic=0
 	pass
 	
-#func _process(delta):
-#		pass
+func _process(delta):
+	pass
 
 func selcMusic():
 	if selMusic==0:
@@ -38,3 +43,5 @@ func checkMusic():
 		stopMusic()
 	else:
 		playMusic()
+
+

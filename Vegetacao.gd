@@ -5,7 +5,7 @@ extends Spatial
 func _ready():
 	Global.selMusic=0
 	#Global.locationPlayer=2
-	Music.checkMusic()
+	#Music.checkMusic()
 	if Global.positionPlayer==1:
 		get_node("mudeater").translation=get_node("Position").translation
 	elif Global.positionPlayer==2:

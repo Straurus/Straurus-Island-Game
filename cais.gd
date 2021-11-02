@@ -8,6 +8,8 @@ extends Spatial
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.locationPlayer=1
+	#Music.checkMusic()
 	if Global.positionPlayer==1:
 		get_node("mudeater").translation=get_node("Position1").translation
 	elif Global.positionPlayer==2:
@@ -16,7 +18,6 @@ func _ready():
 		get_node("mudeater").translation=get_node("Position3").translation
 	elif Global.positionPlayer==0:
 		get_node("mudeater").translation=get_node("Position0").translation
-	pass	
 	pass # Replace with function body.
 
 

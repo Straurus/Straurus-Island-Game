@@ -1,5 +1,6 @@
 extends Control
 
+var plank
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -12,6 +13,7 @@ func hideAll():
 	get_node("ViewportContainer/acambamentoCaverna/acambamentoCaverna").hide()
 	get_node("ViewportContainer/Bifurcaçao/Bifurcaçao").hide()
 	get_node("ViewportContainer/Historia/Historia").hide()
+	get_node("ViewportContainer/Historia/Panel").hide()
 	get_node("ViewportContainer/Cabana/Cabana").hide()
 	get_node("ViewportContainer/barcoEncalhado/barcoEncalhado").hide()
 	get_node("ViewportContainer/Monstro/Monstro").hide()
@@ -32,6 +34,8 @@ func hideAll():
 	pass
 
 func _process(delta):
+
+	
 	if Global.location==0:
 		hideAll()
 		get_node("ViewportContainer/Inicio/Inicio").show()
@@ -59,6 +63,7 @@ func _process(delta):
 		pass
 	elif Global.location==6:
 		hideAll()
+		get_node("ViewportContainer/Historia/Panel").show()
 		get_node("ViewportContainer/Historia/Historia").show()
 		pass
 	elif Global.location==7:
@@ -193,14 +198,6 @@ func _on_Button_pressed():
 		get_tree().change_scene("res://Caverna.tscn")
 		pass
 	pass # Replace with function body.
-
-#func _on_pegar_toggled(button_pressed):
-	if get_node("ViewportContainer/monstroMorto/pegar").pressed==true:
-		Global.plank=true
-	else:
-		Global.plank=false
-	pass # Replace with function body.
-
 
 func _on_pegar_pressed():
 	Global.plank=true

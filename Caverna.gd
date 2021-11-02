@@ -8,7 +8,7 @@ extends Spatial
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.locationPlayer=2
-	Music.checkMusic()
+	#Music.checkMusic()
 	if Global.positionPlayer==1:
 		get_node("mudeater").transform=get_node("Position").transform
 	elif Global.positionPlayer==2:
@@ -29,6 +29,11 @@ func checkDragon():
 	elif Global.deathMonstro==false:
 		get_node("dragon/dragon/dragon").show()
 		get_node("dragon/areaMonstro1").transform=get_node("dragon/Position3D").transform
+	
+	if Global.plank==true:
+		get_node("dragon/plank").hide()
+	else:
+		get_node("dragon/plank").show()
 
 func _on_areaCave_out_body_entered(body):
 	Global.positionPlayer=1
@@ -38,9 +43,7 @@ func _on_areaCave_out_body_entered(body):
 
 
 func _on_areaCave_in_body_entered(body):
-	#bifurcaçao cabana
 	Global.positionPlayer=2
-	Global.lastLocation=Global.location
 	Global.location=4
 	get_tree().change_scene("res://Historia.tscn")
 	pass # Replace with function body.

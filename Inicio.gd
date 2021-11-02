@@ -5,7 +5,8 @@ extends Spatial
 func _ready():
 	Music.selMusic=0
 	Global.locationPlayer=1
-	Music.checkMusic()
+	if Music.audio==Music.get_node("limbo"):
+		Music.checkMusic()
 	if Global.positionPlayer==1:
 		get_node("mudeater").translation=get_node("Position").translation
 	elif Global.positionPlayer==2:
@@ -17,9 +18,15 @@ func _ready():
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	checkWaepon()
+	pass
 
+func checkWaepon():
+	if Global.weapon==true:
+		get_node("boat/katana").hide()
+	else:
+		get_node("boat/katana").show()
 
 func _on_areaCave_body_entered(body):
 	Global.positionPlayer=1
@@ -30,7 +37,7 @@ func _on_areaCave_body_entered(body):
 
 func _on_areaBushes_body_entered(body):
 	Global.positionPlayer=1
-	#Global.location=
+	Global.location=0
 	#get_tree().change_scene("res://Historia.tscn")
 	get_tree().change_scene("res://Vegetacao.tscn")
 	#queue_free()
