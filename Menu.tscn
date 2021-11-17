@@ -183,10 +183,10 @@ margin_bottom = 334.0
 [node name="ButtonMusic" type="CheckButton" parent="CenterContainer/GridContainer/HSplitContainer"]
 margin_right = 303.0
 margin_bottom = 52.0
+custom_fonts/font = ExtResource( 10 )
 custom_icons/off = ExtResource( 9 )
 custom_icons/on_disabled = ExtResource( 7 )
 custom_icons/on = ExtResource( 8 )
-custom_fonts/font = ExtResource( 10 )
 text = "Music"
 align = 2
 

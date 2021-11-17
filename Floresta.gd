@@ -12,10 +12,13 @@ func _ready():
 	#Music.checkMusic()
 	if Global.positionPlayer==1:
 		get_node("mudeater").translation=get_node("Position").translation
+		get_node("mudeater").rotation_degrees=get_node("Position").rotation_degrees
 	elif Global.positionPlayer==2:
 		get_node("mudeater").translation=get_node("Position2").translation
+		get_node("mudeater").rotation_degrees=get_node("Position2").rotation_degrees
 	elif Global.positionPlayer==3:
 		get_node("mudeater").translation=get_node("Position3").translation
+		get_node("mudeater").rotation_degrees=get_node("Position3").rotation_degrees
 	pass # Replace with function body.
 
 
@@ -26,7 +29,7 @@ func _ready():
 
 
 func _on_areaFloresta0_body_entered(body):
-	Global.positionPlayer=1
+	Global.positionPlayer=2
 	Global.location=0
 	get_tree().change_scene("res://Historia.tscn")
 	pass # Replace with function body.
@@ -39,7 +42,7 @@ func _on_areaBushes_body_entered(body):
 
 
 func _on_areaFloresta1_body_entered(body):
-	Global.positionPlayer=2
+	Global.positionPlayer=1
 	Global.location=12
 	get_tree().change_scene("res://Historia.tscn")
 	pass # Replace with function body.

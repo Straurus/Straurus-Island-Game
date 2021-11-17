@@ -93,3 +93,16 @@ material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
+
+[node name="CSGBox" type="CSGBox" parent="RootNode"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.486418, 0 )
+use_collision = true
+width = 1.99
+height = 0.955546
+depth = 1.99
+
+[node name="CSGBox" type="CSGBox" parent="RootNode/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.491891, 0 )
+width = 2.11
+height = 0.001
+depth = 2.14

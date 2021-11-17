@@ -7,11 +7,11 @@ func _ready():
 	#Global.locationPlayer=2
 	#Music.checkMusic()
 	if Global.positionPlayer==1:
-		get_node("mudeater").translation=get_node("Position").translation
+		get_node("mudeater").transform=get_node("Position").transform
 	elif Global.positionPlayer==2:
-		get_node("mudeater").translation=get_node("Position2").translation
+		get_node("mudeater").transform=get_node("Position2").transform
 	elif Global.positionPlayer==3:
-		get_node("mudeater").translation=get_node("Position3").translation
+		get_node("mudeater").transform=get_node("Position3").transform
 	pass # Replace with function body.
 
 
@@ -21,12 +21,12 @@ func _process(delta):
 	pass
 
 
-func _on_areaCave_body_entered(body):
-	Global.positionPlayer=2
-	Global.location=2
-	get_tree().change_scene("res://Historia.tscn")
-	#get_tree().change_scene("res://Caverna.tscn")
-	pass # Replace with function body.
+#func _on_areaCave_body_entered(body):
+#	Global.positionPlayer=2
+#	Global.location=2
+#	get_tree().change_scene("res://Historia.tscn")
+#	#get_tree().change_scene("res://Caverna.tscn")
+#	pass # Replace with function body.
 
 
 func _on_areaFlorest_body_entered(body):

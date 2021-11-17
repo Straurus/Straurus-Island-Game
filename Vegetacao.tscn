@@ -46,7 +46,7 @@ environment = ExtResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0 )
 
 [node name="mudeater" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -75, 2, -48 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -75, 4, -48 )
 
 [node name="CSGBox" type="CSGBox" parent="."]
 transform = Transform( -2, 0, -3.01992e-07, 0, 2, 0, 3.01992e-07, 0, -2, 0, 1, 0 )
@@ -150,16 +150,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, 0 )
 gravity_vec = Vector3( 0, -4, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="quicksand/areaQuicksand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00176, -4.9184, -1.45573 )
 shape = SubResource( 2 )
 
 [node name="Position" type="Position3D" parent="."]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 70, 2, 50 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 70, 4, 50 )
 
 [node name="Position2" type="Position3D" parent="."]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -74, 2, -48 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -74, 4, -48 )
 
 [node name="Position3" type="Position3D" parent="."]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -75, 2, 53 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -75, 4, 53 )
 
 [node name="bush_florest" type="MeshInstance" parent="."]
 transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -90, 0, 73.501 )
@@ -185,6 +186,7 @@ material = SubResource( 5 )
 
 [node name="Cave_Prop_Entrance" type="MeshInstance" parent="."]
 transform = Transform( -5.46392e-07, 0, -12.5, 0, 12.5, 0, 12.5, 0, -5.46392e-07, -85, 1, -40 )
+visible = false
 mesh = ExtResource( 11 )
 material/0 = null
 material/1 = null
@@ -216,9 +218,11 @@ material/26 = null
 
 [node name="areaCave" type="Area" parent="Cave_Prop_Entrance"]
 transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
+visible = false
 
 [node name="CollisionShape" type="CollisionShape" parent="Cave_Prop_Entrance/areaCave"]
 transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, -0.5, 0.75, 0.5 )
+visible = false
 shape = SubResource( 6 )
 
 [node name="portal" type="CSGMesh" parent="Cave_Prop_Entrance"]
