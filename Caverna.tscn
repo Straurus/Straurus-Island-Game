@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Player1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Ocean.tscn" type="PackedScene" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://Assets/portal_animatedtexture.tres" type="Texture" id=8]
 [ext_resource path="res://Assets/Objects/plank.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Objects/mediavalsigns/medievalsigns3.tscn" type="PackedScene" id=10]
+[ext_resource path="res://saveLoad.tscn" type="PackedScene" id=11]
+[ext_resource path="res://HUB.tscn" type="PackedScene" id=12]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.9, 0.2, 0.1 )
@@ -37,6 +39,13 @@ extents = Vector3( 0.721, 0.5, 0.2 )
 
 [node name="caverna" type="Spatial"]
 script = ExtResource( 5 )
+
+[node name="SaveLoad" parent="." instance=ExtResource( 11 )]
+visible = false
+margin_top = -1.0
+margin_bottom = -1.0
+
+[node name="HUB" parent="." instance=ExtResource( 12 )]
 
 [node name="medievalsigns" parent="." instance=ExtResource( 10 )]
 transform = Transform( -0.150442, 0, -9.99887, 0, 10, 0, 9.99887, 0, -0.150442, -22.7608, 0.206804, -45.4318 )
@@ -264,16 +273,16 @@ mesh = SubResource( 6 )
 material = SubResource( 7 )
 
 [node name="Position" type="Position3D" parent="."]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 82, 2, 50 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 82, 2.5, 50 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Position3" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0184, 0, -43.4356 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.018, 2.5, -43.436 )
 
 [node name="Position2" type="Position3D" parent="."]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -85, 2, -60 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -85, 2.5, -60 )
 __meta__ = {
 "_edit_lock_": true
 }

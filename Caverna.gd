@@ -18,12 +18,17 @@ func _ready():
 	elif Global.positionPlayer==3:
 		get_node("mudeater").translation=get_node("Position3").translation
 		get_node("mudeater").rotation_degrees=get_node("Position3").rotation_degrees
+	elif Global.positionPlayer==4:
+		get_node("mudeater").translation=Global.translationPlayer
+		get_node("mudeater").rotation_degrees=Global.rotationPlayer
 
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	checkDragon()
+	if Input.is_action_pressed("ui_F1"):
+		get_node("SaveLoad").show()
 	pass
 
 func checkDragon():

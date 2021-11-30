@@ -21,9 +21,9 @@ __meta__ = {
 
 [node name="GridContainer" type="GridContainer" parent="CenterContainer"]
 margin_left = 360.0
-margin_top = 221.0
+margin_top = 212.0
 margin_right = 663.0
-margin_bottom = 379.0
+margin_bottom = 388.0
 
 [node name="Label" type="Label" parent="CenterContainer/GridContainer"]
 margin_right = 303.0
@@ -42,33 +42,39 @@ margin_right = 303.0
 margin_bottom = 50.0
 text = "Objetivo: achar uma saída da Ilha"
 
-[node name="HSeparator" type="HSeparator" parent="CenterContainer/GridContainer"]
+[node name="Label5" type="Label" parent="CenterContainer/GridContainer"]
 margin_top = 54.0
 margin_right = 303.0
-margin_bottom = 58.0
+margin_bottom = 68.0
+text = "F1: Save/Load Menu"
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/GridContainer"]
+margin_top = 72.0
+margin_right = 303.0
+margin_bottom = 76.0
 rect_pivot_offset = Vector2( -56.9605, -74.7682 )
 
 [node name="Label3" type="Label" parent="CenterContainer/GridContainer"]
-margin_top = 62.0
+margin_top = 80.0
 margin_right = 303.0
-margin_bottom = 76.0
+margin_bottom = 94.0
 text = "Musics: Motions; The Land of Dead;"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HSeparator2" type="HSeparator" parent="CenterContainer/GridContainer"]
-margin_top = 80.0
+margin_top = 98.0
 margin_right = 303.0
-margin_bottom = 84.0
+margin_bottom = 102.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button" type="Button" parent="CenterContainer/GridContainer"]
-margin_top = 88.0
+margin_top = 106.0
 margin_right = 303.0
-margin_bottom = 158.0
+margin_bottom = 176.0
 icon = ExtResource( 1 )
 flat = true
 

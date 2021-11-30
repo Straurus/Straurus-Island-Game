@@ -125,6 +125,8 @@ func _process(delta):
 		get_node("ViewportContainer/monstroMorto/deixar").show()
 		get_node("Panel/Button").hide()
 		pass
+	elif Global.location==21:
+		pass
 	pass
 
 
@@ -196,6 +198,8 @@ func _on_Button_pressed():
 		pass
 	elif Global.location==20:
 		get_tree().change_scene("res://Caverna.tscn")
+		pass
+	elif Global.location==21:
 		pass
 	pass # Replace with function body.
 

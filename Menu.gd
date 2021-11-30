@@ -43,3 +43,5 @@ func _on_ButtonMusic_toggled(button_pressed):
 		i=false
 		Global.song = i
 		Music.checkMusic()
+
+

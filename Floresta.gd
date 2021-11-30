@@ -19,12 +19,16 @@ func _ready():
 	elif Global.positionPlayer==3:
 		get_node("mudeater").translation=get_node("Position3").translation
 		get_node("mudeater").rotation_degrees=get_node("Position3").rotation_degrees
+	elif Global.positionPlayer==4:
+		get_node("mudeater").translation=Global.translationPlayer
+		get_node("mudeater").rotation_degrees=Global.rotationPlayer
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-	
+func _process(delta):
+	if Input.is_action_pressed("ui_F1"):
+		get_node("SaveLoad").show()
 #	pass
 
 
@@ -37,6 +41,7 @@ func _on_areaFloresta0_body_entered(body):
 
 func _on_areaBushes_body_entered(body):
 	Global.positionPlayer=3
+	Global.location=21
 	get_tree().change_scene("res://Vegetacao.tscn")
 	pass # Replace with function body.
 

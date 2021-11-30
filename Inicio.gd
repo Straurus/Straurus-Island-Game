@@ -19,11 +19,16 @@ func _ready():
 	elif Global.positionPlayer==0:
 		get_node("mudeater").translation=get_node("Position0").translation
 		get_node("mudeater").rotation_degrees=get_node("Position0").rotation_degrees
+	elif Global.positionPlayer==4:
+		get_node("mudeater").translation=Global.translationPlayer
+		get_node("mudeater").rotation_degrees=Global.rotationPlayer
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	checkWaepon()
+	if Input.is_action_pressed("ui_F1"):
+		get_node("SaveLoad").show()
 	pass
 
 func checkWaepon():
@@ -41,7 +46,7 @@ func _on_areaCave_body_entered(body):
 
 func _on_areaBushes_body_entered(body):
 	Global.positionPlayer=1
-	Global.location=0
+	Global.location=21
 	#get_tree().change_scene("res://Historia.tscn")
 	get_tree().change_scene("res://Vegetacao.tscn")
 	#queue_free()

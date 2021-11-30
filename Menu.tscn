@@ -85,7 +85,7 @@ margin_right = 303.0
 margin_bottom = 22.0
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Straurus Island Game"
+text = "Straurus' Island Game"
 align = 1
 valign = 1
 

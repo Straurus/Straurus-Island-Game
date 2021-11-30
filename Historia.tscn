@@ -109,8 +109,8 @@ grow_horizontal = 2
 grow_vertical = 2
 custom_fonts/normal_font = ExtResource( 6 )
 tab_size = 10
-text = "Você entra na caverna, caminha um pouco e vê dois caminhos: A Leste um que um monstro negro que está dormindo e a oeste uma passagem pra dentro da caverna.
-Você vai a Leste para atacar o monstro, vai pra oeste pra dentro da caverna ou retorna por onde tu vieste."
+text = "Você entra na caverna, caminha um pouco e vê dois caminhos: Um que um dragão negro que está dormindo e outro, uma passagem pra dentro da caverna.
+Você vai em diração ao dragão para atacar o dragão, vai pra dentro da caverna ou retorna por onde tu vieste."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -131,7 +131,7 @@ grow_horizontal = 2
 grow_vertical = 2
 custom_fonts/normal_font = ExtResource( 6 )
 tab_size = 10
-text = "Indo pra dentro da ilha você vê uma bifurcação de um lado você vê um caminho de vegetação morta , outro uma floresta  ou você pode retornar pra onde tu vieste"
+text = "Indo pra dentro da ilha você vê dois caminhos: Um caminho de vegetação morta , outro uma floresta  ou você pode retornar pra onde tu vieste"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -278,7 +278,7 @@ grow_horizontal = 2
 grow_vertical = 2
 custom_fonts/normal_font = ExtResource( 6 )
 tab_size = 10
-text = "Quando tu aproxima do mostro ele acorda e como você não tem arma o monstro te mata."
+text = "Quando tu aproxima do dragão ele acorda e como você não tem arma o monstro te mata."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -299,7 +299,7 @@ grow_horizontal = 2
 grow_vertical = 2
 custom_fonts/normal_font = ExtResource( 6 )
 tab_size = 10
-text = "Quando tu aproxima do mostro ele acorda e como você tem arma ,tu mata o monstro"
+text = "Quando tu aproxima do dragão ele acorda e como você tem arma ,tu mata o monstro"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -406,8 +406,8 @@ grow_horizontal = 2
 grow_vertical = 2
 custom_fonts/normal_font = ExtResource( 6 )
 tab_size = 10
-text = "Você caminha pastando e vê três caminhos: a leste um que um monstro negro que está dormindo e a oeste uma passagem pra dentro da caverna.
-Você vai a Leste para atacar o monstro, vai para oeste para dentro da caverna ou em uma passagem pra fora da caverna.
+text = "Você caminha bastando e vê três caminhos: Um que um dragão negro que está dormindo e outro uma passagem pra dentro da caverna.
+Você vai em diração do dragão para atacar o dragão, vai para para dentro da caverna ou em uma passagem pra fora da caverna.
 "
 __meta__ = {
 "_edit_use_anchors_": false
@@ -514,7 +514,7 @@ grow_vertical = 2
 custom_fonts/normal_font = ExtResource( 6 )
 tab_size = 10
 text = "
-com o monstro morto no chão você o vasculha e você acha um galho longo você pega o galho  e você segue seu caminho ou você deixa o galho
+com o dragão morto no chão você o vasculha e você acha um galho longo você pega o galho  e você segue seu caminho ou você deixa o galho
 e você segue o teu caminho
 "
 __meta__ = {

@@ -5,17 +5,15 @@ var selMusic
 var positionPlayer
 var locationPlayer
 var location
-var lastLocation
-var translationPlayer
 var weapon=false
 var plank=false
 var deathMonstro=false
 var audio
-
-func positionPlayer(vector3, x):
-	translationPlayer=vector3
-	lastLocation=x
-
+var save=false
+var lastLocation
+var translationPlayer
+var rotationPlayer
+	
 func _ready():
 	selMusic=0
 	pass

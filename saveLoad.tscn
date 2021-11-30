@@ -1,0 +1,165 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/textures/fonts/RunicFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/textures/button.bmp" type="Texture" id=2]
+[ext_resource path="res://Assets/textures/fonts/handwrite.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Assets/textures/ui song/A - 57.png" type="Texture" id=4]
+[ext_resource path="res://Assets/textures/ui song/A - 56.png" type="Texture" id=5]
+[ext_resource path="res://Assets/textures/ui song/A - 55.png" type="Texture" id=6]
+[ext_resource path="res://saveLoad.gd" type="Script" id=7]
+
+[node name="saveLoad" type="Control"]
+anchor_right = 1.001
+anchor_bottom = 1.0
+margin_right = -0.0240479
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.993
+margin_right = 2.0
+margin_bottom = 0.199951
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ViewportContainer" type="ViewportContainer" parent="CenterContainer"]
+margin_left = 363.0
+margin_top = 147.0
+margin_right = 663.0
+margin_bottom = 447.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="CenterContainer/ViewportContainer"]
+size = Vector2( 300, 300 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/ViewportContainer/Viewport"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Button" type="Button" parent="CenterContainer/ViewportContainer/Viewport/GridContainer"]
+margin_right = 303.0
+margin_bottom = 70.0
+icon = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/ViewportContainer/Viewport/GridContainer/Button"]
+anchor_right = 0.972
+anchor_bottom = 1.0
+margin_left = 6.2063
+margin_top = 3.7937
+margin_right = -0.309723
+margin_bottom = -4.2063
+custom_fonts/font = ExtResource( 1 )
+text = "Save"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="CenterContainer/ViewportContainer/Viewport/GridContainer"]
+margin_top = 74.0
+margin_right = 303.0
+margin_bottom = 144.0
+icon = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/ViewportContainer/Viewport/GridContainer/Button2"]
+anchor_right = 0.972
+anchor_bottom = 1.0
+margin_left = 6.2063
+margin_top = 3.7937
+margin_right = -0.309723
+margin_bottom = -4.2063
+custom_fonts/font = ExtResource( 1 )
+text = "Load"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="CenterContainer/ViewportContainer/Viewport/GridContainer"]
+margin_top = 148.0
+margin_right = 303.0
+margin_bottom = 218.0
+icon = ExtResource( 2 )
+flat = true
+
+[node name="Label" type="Label" parent="CenterContainer/ViewportContainer/Viewport/GridContainer/Button3"]
+anchor_right = 0.972
+anchor_bottom = 1.0
+margin_left = 7.0
+margin_top = 3.0
+margin_right = 0.483978
+margin_bottom = -5.0
+custom_fonts/font = ExtResource( 1 )
+text = "Sair"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="CenterContainer/ViewportContainer/Viewport/GridContainer"]
+margin_top = 222.0
+margin_right = 303.0
+margin_bottom = 292.0
+icon = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/ViewportContainer/Viewport/GridContainer/Button4"]
+anchor_right = 0.972
+anchor_bottom = 1.0
+margin_left = 6.2063
+margin_top = 3.7937
+margin_right = -0.309723
+margin_bottom = -4.2063
+custom_fonts/font = ExtResource( 1 )
+text = "Voltar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonMusic" type="CheckButton" parent="CenterContainer/ViewportContainer/Viewport/GridContainer"]
+margin_top = 296.0
+margin_right = 303.0
+margin_bottom = 348.0
+custom_fonts/font = ExtResource( 3 )
+custom_icons/off = ExtResource( 6 )
+custom_icons/on_disabled = ExtResource( 4 )
+custom_icons/on = ExtResource( 5 )
+text = "Music"
+align = 2
+
+[connection signal="pressed" from="CenterContainer/ViewportContainer/Viewport/GridContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CenterContainer/ViewportContainer/Viewport/GridContainer/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="CenterContainer/ViewportContainer/Viewport/GridContainer/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="CenterContainer/ViewportContainer/Viewport/GridContainer/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="toggled" from="CenterContainer/ViewportContainer/Viewport/GridContainer/ButtonMusic" to="." method="_on_ButtonMusic_toggled"]
