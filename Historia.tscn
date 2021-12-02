@@ -87,7 +87,7 @@ custom_fonts/normal_font = ExtResource( 6 )
 tab_size = 10
 text = "Você morreu. 
 
-E você surge no limbo onde a 2 caminhos: um que volta pra ilha e outro que leva pro menu.
+E você surge no limbo onde a dois caminhos: um que volta pra ilha e outro que leva pro menu.
 "
 __meta__ = {
 "_edit_use_anchors_": false

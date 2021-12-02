@@ -68,9 +68,12 @@ __meta__ = {
 
 [node name="GridContainer" type="GridContainer" parent="CenterContainer"]
 margin_left = 360.0
-margin_top = 150.0
+margin_top = 133.0
 margin_right = 663.0
 margin_bottom = 467.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="HSeparator" type="HSeparator" parent="CenterContainer/GridContainer"]
 margin_right = 303.0

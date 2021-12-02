@@ -16,11 +16,11 @@ func _ready():
 func _physics_process(delta):
 	location=Global.locationPlayer
 	if location==1:
-		velocidade=20
+		velocidade=25
 	elif location==2:
 		velocidade=50
 	elif location==0:
-		velocidade=15
+		velocidade=20
 
 	var direcao = Vector3()
 	deslocamento.y += gravidade * delta
