@@ -7,12 +7,15 @@ var locationPlayer
 var location
 var weapon=false
 var plank=false
+var lastWeapon=false
+var lastPlank=false
 var deathMonstro=false
 var audio
 var save=false
 var lastLocation
 var translationPlayer
 var rotationPlayer
+
 	
 func _ready():
 	selMusic=0

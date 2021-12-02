@@ -1,12 +1,13 @@
 extends Control
 var i
 
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
+func _process(delta):
+	
+	pass
 
 func savePositionPlayer(x, y, z):
 	Global.translationPlayer=x
@@ -14,8 +15,8 @@ func savePositionPlayer(x, y, z):
 	Global.lastLocation=z
 	Global.positionPlayer=4
 	pass
+
 func loadPositionPlayer(z):
-	
 	if z==0:
 		get_tree().change_scene("res://Inicio.tscn")
 		#inicio
@@ -45,11 +46,15 @@ func loadPositionPlayer(z):
 	pass
 func _on_Button_pressed():
 	savePositionPlayer(get_node("../mudeater").translation, get_node("../mudeater").rotation_degrees, Global.location)
+	Global.lastPlank=Global.plank
+	Global.lastWeapon=Global.weapon
 	pass # Replace with function body.
 
 
 func _on_Button2_pressed():
 	loadPositionPlayer(Global.lastLocation)
+	Global.plank=Global.lastPlank
+	Global.weapon=Global.lastWeapon
 	pass
 
 

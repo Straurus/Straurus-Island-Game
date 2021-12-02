@@ -27,7 +27,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	checkDragon()
-	if Input.is_action_pressed("ui_F1"):
+	if Input.is_action_pressed("ui_Esc"):
 		get_node("SaveLoad").show()
 	pass
 
