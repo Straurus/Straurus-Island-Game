@@ -46,7 +46,7 @@ text = "Objetivo: achar uma saída da Ilha"
 margin_top = 54.0
 margin_right = 303.0
 margin_bottom = 68.0
-text = "F1: Save/Load Menu"
+text = "Esc: Save/Load Menu"
 
 [node name="HSeparator" type="HSeparator" parent="CenterContainer/GridContainer"]
 margin_top = 72.0
