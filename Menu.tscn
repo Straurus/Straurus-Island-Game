@@ -23,10 +23,10 @@ region_rect = Rect2( 0, 0, 365, 107 )
 [node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -3.17477
-margin_top = 17.4614
-margin_right = -3.1748
-margin_bottom = 17.4614
+margin_left = -1.01022
+margin_top = 1.44333
+margin_right = -1.01025
+margin_bottom = 1.4433
 rect_pivot_offset = Vector2( -155.176, 169 )
 script = ExtResource( 1 )
 __meta__ = {
@@ -36,10 +36,9 @@ __meta__ = {
 [node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 1.0
-margin_bottom = 1.0
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -68,9 +67,9 @@ __meta__ = {
 
 [node name="GridContainer" type="GridContainer" parent="CenterContainer"]
 margin_left = 360.0
-margin_top = 133.0
+margin_top = 192.0
 margin_right = 663.0
-margin_bottom = 467.0
+margin_bottom = 526.0
 __meta__ = {
 "_edit_lock_": true
 }
@@ -122,9 +121,6 @@ custom_fonts/font = ExtResource( 6 )
 text = "Jogar"
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Button2" type="Button" parent="CenterContainer/GridContainer"]
 margin_top = 126.0

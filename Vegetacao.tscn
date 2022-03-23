@@ -60,6 +60,7 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -75, 4,
 [node name="CSGBox" type="CSGBox" parent="."]
 transform = Transform( -2, 0, -3.01992e-07, 0, 2, 0, 3.01992e-07, 0, -2, 0, 1, 0 )
 use_collision = true
+collision_mask = 3
 width = 100.0
 depth = 100.0
 material = ExtResource( 5 )
@@ -135,7 +136,7 @@ __meta__ = {
 }
 
 [node name="quicksand" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0 )
 width = 100.0
 depth = 100.0
 material = ExtResource( 8 )
@@ -149,6 +150,8 @@ material = SubResource( 1 )
 
 [node name="areaQuicksand" type="Area" parent="quicksand"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+collision_layer = 65
+collision_mask = 2
 gravity_vec = Vector3( 0, -4, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="quicksand/areaQuicksand"]
@@ -156,6 +159,8 @@ shape = SubResource( 2 )
 
 [node name="areaQuicksand2" type="Area" parent="quicksand"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, 0 )
+collision_layer = 65
+collision_mask = 2
 gravity_vec = Vector3( 0, -4, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="quicksand/areaQuicksand2"]
@@ -183,6 +188,8 @@ material/0 = ExtResource( 9 )
 
 [node name="areaFlorest" type="Area" parent="bush_florest"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 102.879, 71.5252, 0 )
+collision_layer = 17
+collision_mask = 2
 
 [node name="CollisionShape" type="CollisionShape" parent="bush_florest/areaFlorest"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.16967, 0, 0 )
@@ -228,6 +235,8 @@ material/26 = null
 [node name="areaCave" type="Area" parent="Cave_Prop_Entrance"]
 transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
 visible = false
+collision_layer = 17
+collision_mask = 2
 
 [node name="CollisionShape" type="CollisionShape" parent="Cave_Prop_Entrance/areaCave"]
 transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, -0.5, 0.75, 0.5 )
@@ -251,6 +260,8 @@ material/0 = ExtResource( 9 )
 
 [node name="areaInicio" type="Area" parent="bush_Inicio"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 102.879, 71.5252, 0 )
+collision_layer = 17
+collision_mask = 2
 
 [node name="CollisionShape" type="CollisionShape" parent="bush_Inicio/areaInicio"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.16967, 0, 0 )

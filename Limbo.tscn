@@ -47,6 +47,8 @@ environment = ExtResource( 3 )
 
 [node name="CSGBox" type="CSGBox" parent="."]
 use_collision = true
+collision_layer = 5
+collision_mask = 3
 width = 500.0
 depth = 500.0
 material = SubResource( 1 )
@@ -173,6 +175,8 @@ __meta__ = {
 
 [node name="Area" type="Area" parent="Stone_to_Stucco_Doorway_Wide_Tall_2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0.5 )
+collision_layer = 17
+collision_mask = 2
 
 [node name="CollisionShape" type="CollisionShape" parent="Stone_to_Stucco_Doorway_Wide_Tall_2/Area"]
 shape = SubResource( 3 )
@@ -263,6 +267,8 @@ material/74 = null
 
 [node name="Area2" type="Area" parent="Stone_to_Stucco_Doorway_Wide_Tall_1"]
 transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0.75, 0.5 )
+collision_layer = 17
+collision_mask = 2
 
 [node name="CollisionShape" type="CollisionShape" parent="Stone_to_Stucco_Doorway_Wide_Tall_1/Area2"]
 shape = SubResource( 6 )

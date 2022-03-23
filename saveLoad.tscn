@@ -28,15 +28,15 @@ __meta__ = {
 
 [node name="ViewportContainer" type="ViewportContainer" parent="CenterContainer"]
 margin_left = 363.0
-margin_top = 147.0
+margin_top = 182.0
 margin_right = 663.0
-margin_bottom = 447.0
+margin_bottom = 532.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Viewport" type="Viewport" parent="CenterContainer/ViewportContainer"]
-size = Vector2( 300, 300 )
+size = Vector2( 300, 350 )
 transparent_bg = true
 handle_input_locally = false
 render_target_update_mode = 3
@@ -156,7 +156,9 @@ custom_icons/off = ExtResource( 6 )
 custom_icons/on_disabled = ExtResource( 4 )
 custom_icons/on = ExtResource( 5 )
 text = "Music"
-align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="CenterContainer/ViewportContainer/Viewport/GridContainer/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="CenterContainer/ViewportContainer/Viewport/GridContainer/Button2" to="." method="_on_Button2_pressed"]

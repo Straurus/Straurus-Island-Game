@@ -25,10 +25,10 @@ region_rect = Rect2( 0, 0, 365, 107 )
 [node name="Historias" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 2.0
-margin_top = 3.0
-margin_right = -1.0
-margin_bottom = -3.0
+margin_left = 0.501678
+margin_top = 0.00338745
+margin_right = -2.49829
+margin_bottom = -5.99658
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_lock_": true,
@@ -38,10 +38,9 @@ __meta__ = {
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -1.5874
-margin_top = -3.1748
-margin_right = 1.4126
-margin_bottom = 2.8252
+margin_top = 3.0
+margin_right = 2.99994
+margin_bottom = -6.10352e-05
 rect_min_size = Vector2( 51, 30 )
 __meta__ = {
 "_edit_lock_": true,
@@ -85,7 +84,7 @@ grow_horizontal = 2
 grow_vertical = 2
 custom_fonts/normal_font = ExtResource( 6 )
 tab_size = 10
-text = "Você morreu. 
+text = "Você morreu e percebe que voce esta num lugar que tu nunca viu.
 
 E você surge no limbo onde a dois caminhos: um que volta pra ilha e outro que leva pro menu.
 "
@@ -188,11 +187,12 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="Panel" type="Panel" parent="ViewportContainer/Historia"]
+visible = false
 show_behind_parent = true
 light_mask = 3
 anchor_left = 0.233
 anchor_top = 0.233
-anchor_right = 0.415
+anchor_right = 0.391
 anchor_bottom = 0.233
 margin_top = 14.0
 margin_right = 350.0
@@ -200,6 +200,7 @@ margin_bottom = 235.0
 custom_styles/panel = SubResource( 1 )
 
 [node name="Historia" type="RichTextLabel" parent="ViewportContainer/Historia"]
+visible = false
 margin_left = 250.0
 margin_top = 150.0
 margin_right = 800.0
@@ -580,19 +581,19 @@ margin_right = 0.848083
 margin_bottom = 1.6
 custom_styles/panel = SubResource( 3 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_lock_": true
 }
 
 [node name="Button" type="Button" parent="Panel"]
-margin_left = 356.558
-margin_top = 477.853
-margin_right = 659.558
-margin_bottom = 547.853
+margin_left = 357.0
+margin_top = 478.0
+margin_right = 660.0
+margin_bottom = 548.0
+action_mode = 0
 icon = ExtResource( 5 )
 flat = true
 __meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
+"_edit_lock_": true
 }
 
 [node name="Label" type="Label" parent="Panel/Button"]
@@ -606,8 +607,7 @@ text = "Continuar"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
+"_edit_lock_": true
 }
 
 [connection signal="pressed" from="ViewportContainer/monstroMorto/pegar" to="." method="_on_pegar_pressed"]

@@ -23,6 +23,8 @@ material/0 = null
 
 [node name="Area" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0 )
+collision_layer = 33
+collision_mask = 2
 space_override = 2
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]

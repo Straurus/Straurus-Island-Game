@@ -4,7 +4,7 @@ var song=false
 var selMusic
 var positionPlayer
 var locationPlayer
-var location
+var location=0
 var weapon=false
 var plank=false
 var lastWeapon=false

@@ -33,8 +33,81 @@ func hideAll():
 	get_node("Panel/Button").show()
 	pass
 
-func _process(delta):
+func changeText():
+	if Global.location==0:
+		get_tree().change_scene("res://Inicio.tscn")
+		pass
+	elif Global.location==1:
+		get_tree().change_scene("res://Limbo.tscn")
+		pass
+	elif Global.location==2:
+		get_tree().change_scene("res://Caverna.tscn")
+		pass
+	elif Global.location==3:
+		get_tree().change_scene("res://Floresta.tscn")
+		#Global.location=12
+		#get_tree().change_scene("res://Historia.tscn")
+		pass
+	elif Global.location==4:
+		Global.location=11
+		pass
+	elif Global.location==5:
+		get_tree().change_scene("res://cais.tscn")
+		pass
+	elif Global.location==6:
+		get_tree().change_scene("res://Inicio.tscn")
+		pass
+	elif Global.location==7:
+		get_tree().change_scene("res://cais.tscn")
+		pass
+	elif Global.location==8:
+		Global.location=6
+		#get_tree().change_scene("res://Historia.tscn")
+		pass
+	elif Global.location==9:
+		Global.location=1
+		pass
+	elif Global.location==10:
+		Global.location=20
+		pass
+	elif Global.location==11:
+		Global.location=5
+		pass
+	elif Global.location==12:
+		Global.location=5
+		pass
+	elif Global.location==13:
+		Global.location=1
+		pass
+	elif Global.location==14:
+		Global.location=19
+		pass
+	elif Global.location==15:
+		#Global.location=2
+		get_tree().change_scene("res://Caverna.tscn")
+		pass
+	elif Global.location==16:
+		Global.location=17
+		pass
+	elif Global.location==17:
+		Global.location=18
+		#get_tree().change_scene("res://Historia.tscn")
+		pass
+	elif Global.location==18:
+		get_tree().change_scene("res://Inicio.tscn")
+		pass
+	elif Global.location==19:
+		get_tree().change_scene("res://Menu.tscn")
+		pass
+	elif Global.location==20:
+		get_tree().change_scene("res://Caverna.tscn")
+		pass
+	elif Global.location==21:
+		pass
 
+func _process(delta):
+	if Input.is_action_just_pressed("ui_accept"):
+		changeText()
 	
 	if Global.location==0:
 		hideAll()
@@ -131,76 +204,7 @@ func _process(delta):
 
 
 func _on_Button_pressed():
-	if Global.location==0:
-		get_tree().change_scene("res://Inicio.tscn")
-		pass
-	elif Global.location==1:
-		get_tree().change_scene("res://Limbo.tscn")
-		pass
-	elif Global.location==2:
-		get_tree().change_scene("res://Caverna.tscn")
-		pass
-	elif Global.location==3:
-		get_tree().change_scene("res://Floresta.tscn")
-		#Global.location=12
-		#get_tree().change_scene("res://Historia.tscn")
-		pass
-	elif Global.location==4:
-		Global.location=11
-		pass
-	elif Global.location==5:
-		get_tree().change_scene("res://cais.tscn")
-		pass
-	elif Global.location==6:
-		get_tree().change_scene("res://Inicio.tscn")
-		pass
-	elif Global.location==7:
-		get_tree().change_scene("res://cais.tscn")
-		pass
-	elif Global.location==8:
-		Global.location=6
-		#get_tree().change_scene("res://Historia.tscn")
-		pass
-	elif Global.location==9:
-		Global.location=1
-		pass
-	elif Global.location==10:
-		Global.location=20
-		pass
-	elif Global.location==11:
-		Global.location=5
-		pass
-	elif Global.location==12:
-		Global.location=5
-		pass
-	elif Global.location==13:
-		Global.location=1
-		pass
-	elif Global.location==14:
-		Global.location=19
-		pass
-	elif Global.location==15:
-		#Global.location=2
-		get_tree().change_scene("res://Caverna.tscn")
-		pass
-	elif Global.location==16:
-		Global.location=17
-		pass
-	elif Global.location==17:
-		Global.location=18
-		#get_tree().change_scene("res://Historia.tscn")
-		pass
-	elif Global.location==18:
-		get_tree().change_scene("res://Inicio.tscn")
-		pass
-	elif Global.location==19:
-		get_tree().change_scene("res://Menu.tscn")
-		pass
-	elif Global.location==20:
-		get_tree().change_scene("res://Caverna.tscn")
-		pass
-	elif Global.location==21:
-		pass
+	changeText()
 	pass # Replace with function body.
 
 func _on_pegar_pressed():
