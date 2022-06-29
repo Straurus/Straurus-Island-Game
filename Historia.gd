@@ -13,6 +13,7 @@ func hideAll():
 	get_node("ViewportContainer/acambamentoCaverna/acambamentoCaverna").hide()
 	get_node("ViewportContainer/Bifurcaçao/Bifurcaçao").hide()
 	get_node("ViewportContainer/Historia/Historia").hide()
+	get_node("ViewportContainer/Historia/Carta").hide()
 	get_node("ViewportContainer/Historia/Panel").hide()
 	get_node("ViewportContainer/Cabana/Cabana").hide()
 	get_node("ViewportContainer/barcoEncalhado/barcoEncalhado").hide()
@@ -137,6 +138,7 @@ func _process(delta):
 	elif Global.location==6:
 		hideAll()
 		get_node("ViewportContainer/Historia/Panel").show()
+		get_node("ViewportContainer/Historia/Carta").show()
 		get_node("ViewportContainer/Historia/Historia").show()
 		pass
 	elif Global.location==7:

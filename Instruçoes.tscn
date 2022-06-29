@@ -21,9 +21,9 @@ __meta__ = {
 
 [node name="GridContainer" type="GridContainer" parent="CenterContainer"]
 margin_left = 360.0
-margin_top = 212.0
+margin_top = 272.0
 margin_right = 663.0
-margin_bottom = 388.0
+margin_bottom = 448.0
 
 [node name="Label" type="Label" parent="CenterContainer/GridContainer"]
 margin_right = 303.0
