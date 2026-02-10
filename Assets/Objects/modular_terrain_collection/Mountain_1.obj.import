@@ -16,4 +16,5 @@ dest_files=[ "res://.import/Mountain_1.obj-852cc44034a3a2b2b9172f9e8ed1dc3a.mesh
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286

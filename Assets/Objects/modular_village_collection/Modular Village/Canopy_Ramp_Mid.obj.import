@@ -16,4 +16,5 @@ dest_files=[ "res://.import/Canopy_Ramp_Mid.obj-b26d7a70b5b174ee2b5edf447913420b
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286

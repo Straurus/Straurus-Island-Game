@@ -16,4 +16,5 @@ dest_files=[ "res://.import/Hilly_Prop_Camp_Wood_Pile.obj-1b53728d2f41a43ed75df5
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286

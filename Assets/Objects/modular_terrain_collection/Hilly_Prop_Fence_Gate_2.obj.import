@@ -16,4 +16,5 @@ dest_files=[ "res://.import/Hilly_Prop_Fence_Gate_2.obj-cbe8496e6740b37c2c4a911e
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286

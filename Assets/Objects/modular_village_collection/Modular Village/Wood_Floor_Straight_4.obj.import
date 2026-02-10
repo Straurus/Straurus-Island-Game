@@ -16,4 +16,5 @@ dest_files=[ "res://.import/Wood_Floor_Straight_4.obj-e4846df437c2aa87e54fe1afcb
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286

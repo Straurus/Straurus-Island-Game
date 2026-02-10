@@ -16,4 +16,5 @@ dest_files=[ "res://.import/Hilly_Prop_Grass_Clump_1.obj-b4ee9e63efc20f89d2aff37
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286

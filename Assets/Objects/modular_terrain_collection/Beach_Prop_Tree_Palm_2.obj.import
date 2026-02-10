@@ -16,4 +16,5 @@ dest_files=[ "res://.import/Beach_Prop_Tree_Palm_2.obj-154b2b73ec5d55cdd1d778118
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286
